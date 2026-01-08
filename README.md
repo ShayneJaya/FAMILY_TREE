@@ -9,33 +9,7 @@ Quick Start
 3) Right-click index.html and select “Open with Live Server”
 4) Replace placeholder JSON and images with your real data
 
-Planned Project Structure
-This repo will use the following structure (placeholders included):
-.
-├── index.html
-├── README.md
-├── assets
-│   ├── css
-│   │   └── styles.css
-│   ├── js
-│   │   ├── app.js
-│   │   ├── dataLoader.js
-│   │   └── render.js
-│   └── img
-│       ├── placeholders
-│       │   ├── person-placeholder.svg   (optional)
-│       │   └── README.md
-│       └── portraits
-│           └── README.md   (naming conventions for photos)
-├── data
-│   ├── people.json
-│   ├── relationships.json
-│   └── README.md          (data format, tips)
-└── .vscode
-    └── settings.json      (optional Live Server tweaks)
 
-Data Model (JSON)
-You can convert your Excel to JSON and drop files into data/. Below are recommended shapes.
 
 1) people.json
 An array of person records.
@@ -85,26 +59,6 @@ Photos and Naming Conventions
 - Recommended size: 400–800px on the short edge to balance clarity and file size.
 - If a photo is not present, the UI will display assets/img/placeholders/person-placeholder.svg automatically.
 
-Using Excel as the Source of Truth
-Option A — Manual (no tooling):
-1) Save your Excel sheets as CSV (e.g., people.csv and relationships.csv)
-2) Use an online CSV-to-JSON converter for each CSV
-3) Save results as data/people.json and data/relationships.json
-
-Option B — Local (Node-based one-liners):
-You already have Node installed. You can use csvtojson via npx (no global install needed).
-- Convert people.csv to JSON:
-  npx csvtojson people.csv > data/people.json
-- Convert relationships.csv to JSON:
-  npx csvtojson relationships.csv > data/relationships.json
-
-Suggested people.csv columns:
-id,firstName,lastName,gender,birthDate,deathDate,occupation,bio,photo
-
-Suggested relationships.csv columns:
-id,type,parentId,childId,personAId,personBId,startDate,endDate
-
-Important: Ensure IDs in relationships.json match those in people.json exactly.
 
 How Rendering Works (high level)
 - assets/js/dataLoader.js: Fetches people.json and relationships.json
@@ -120,10 +74,6 @@ What You Need to Change Later
 - Drop your images into assets/img/portraits/ following naming conventions
 - Tweak styles in assets/css/styles.css as desired
 
-Live Server Notes
-- Right-click index.html → Open with Live Server
-- If your JSON files don’t load, check the browser console for fetch errors (CORS or path issues)
-- Keep data files under the same workspace so Live Server can serve them
 
 Roadmap (optional enhancements)
 - Add a printable pedigree view
@@ -134,9 +84,6 @@ Roadmap (optional enhancements)
 License
 You may use and modify this scaffold freely for your project.
 
-
-
-Scaffold for your Family Tree Directory site is set up with a clean, static structure wired for Live Server. It includes base styles, JS modules to load and render JSON data, placeholder data files, and image directories for portraits.
 
 What’s included
 

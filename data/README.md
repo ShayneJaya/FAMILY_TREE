@@ -89,4 +89,3 @@ Validation Tips
 - Ensure every people[] reference in photos.json exists in people.json
 - Verify each photo src path points to an existing file under assets/img (correct capitalization matters on some hosts)
 - Keep IDs consistent (case‑sensitive)
-- Test locally with Live Server: open index.html and watch the console for any fetch/parse errors
