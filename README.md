@@ -1,16 +1,4 @@
 Family Tree Directory — Static Site Scaffold
-
-Overview
-A lightweight, client-side website scaffold for a family tree directory. It’s designed to be served locally with VS Code’s Live Server extension or hosted as static files on GitHub Pages later. The site loads data from JSON files and renders a simple directory with person details. Photos can be linked to each person record.
-
-Quick Start
-1) Open this folder in VS Code
-2) Install/enable Live Server extension
-3) Right-click index.html and select “Open with Live Server”
-4) Replace placeholder JSON and images with your real data
-
-
-
 1) people.json
 An array of person records.
 [
