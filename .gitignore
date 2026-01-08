@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Node (if you later add tooling)
+node_modules/
+
+# Editor configs
+.vscode/
+
+# Thumbnails
+Thumbs.db

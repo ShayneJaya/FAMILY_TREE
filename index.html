@@ -1,0 +1,69 @@
+<!--
+  Family Tree Directory
+  Static site scaffold to be served with VS Code Live Server or GitHub Pages.
+  Replace placeholder data in /data and images in /assets/img/portraits as needed.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Family Tree Directory</title>
+    <meta name="description" content="A lightweight family tree directory." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Weerapura Family Tree</h1>
+        <div class="actions">
+          <label for="searchInput" class="sr-only">Search</label>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search by name..."
+            autocomplete="off"
+          />
+          <span id="peopleCount" class="count-badge">0 people</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout container">
+      <aside class="directory" aria-label="Directory list">
+        <ul id="directoryList" class="card-list" role="list">
+          <!-- Filled by render.js -->
+        </ul>
+      </aside>
+
+      <section id="details" class="details" aria-label="Person details">
+        <div class="placeholder">
+          <h2>Welcome</h2>
+          <p>
+            Use the search box or select a person from the directory to view
+            details. Replace placeholder JSON in the <code>data/</code> folder
+            and drop portraits into <code>assets/img/portraits/</code>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>
+          Static scaffold. Data from <code>data/people.json</code> and
+          <code>data/relationships.json</code>.
+        </small>
+      </div>
+    </footer>
+
+    <noscript>
+      This app requires JavaScript to load JSON data and render the directory.
+    </noscript>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

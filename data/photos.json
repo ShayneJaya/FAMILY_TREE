@@ -1,0 +1,23 @@
+[
+  {
+    "id": "PH001",
+    "src": "assets/img/portraits/AncestorsFamily.jpg",
+    "people": ["P001", "P002", "P003", "P004", "P005", "P006"],
+    "date": null,
+    "caption": "Family Photo"
+  },
+  {
+    "id": "PH002",
+    "src": "assets/img/portraits/P004.jpg",
+    "people": ["P004"],
+    "date": "1993",
+    "caption": "Photographed in 1993"
+  },
+  {
+    "id": "PH002",
+    "src": "assets/img/portraits/P006.jpg",
+    "people": ["P006"],
+    "date": "1993",
+    "caption": "Photographed in 1993"
+  }
+]

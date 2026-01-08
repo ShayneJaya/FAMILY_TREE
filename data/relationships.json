@@ -1,0 +1,23 @@
+[
+  {
+    "id": "R001",
+    "type": "spouse",
+    "personAId": "P001",
+    "personBId": "P002",
+    "startDate": null
+  },
+  {
+    "id": "R002",
+    "type": "parent-child",
+    "parentId": "P001",
+    "childId": "P003",
+    "startDate": null
+  },
+  {
+    "id": "R003",
+    "type": "parent-child",
+    "parentId": "P002",
+    "childId": "P003",
+    "startDate": null
+  }
+]
