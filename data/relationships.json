@@ -37,5 +37,1236 @@
     "childId": "P006",
     "startDate": null,
     "childRole": "daughter"
+  },
+
+  {
+    "id": "R006",
+    "type": "parent-child",
+    "parents": ["P010", "P003"],
+    "childId": "P008",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R007",
+    "type": "parent-child",
+    "parents": ["P010", "P003"],
+    "childId": "P009",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R008",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P017",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R009",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P018",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R010",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P019",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R011",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P020",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R012",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P021",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R013",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P022",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R014",
+    "type": "parent-child",
+    "parents": ["P005", "P012"],
+    "childId": "P024",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R015",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P027",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R016",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P028",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R017",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P030",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R018",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P031",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R019",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P032",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R020",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P034",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R021",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P036",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R022",
+    "type": "parent-child",
+    "parents": ["P014", "P007"],
+    "childId": "P051",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R023",
+    "type": "parent-child",
+    "parents": ["P014", "P007"],
+    "childId": "P052",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R024",
+    "type": "parent-child",
+    "parents": ["P014", "P007"],
+    "childId": "P053",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R025",
+    "type": "parent-child",
+    "parents": ["P014", "P007"],
+    "childId": "P054",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R026",
+    "type": "parent-child",
+    "parents": ["P009", "P016"],
+    "childId": "P060",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R027",
+    "type": "parent-child",
+    "parents": ["P017", "P029"],
+    "childId": "P064",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R028",
+    "type": "parent-child",
+    "parents": ["P018", "P046"],
+    "childId": "P066",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R029",
+    "type": "parent-child",
+    "parents": ["P021", "P048"],
+    "childId": "P071",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R030",
+    "type": "parent-child",
+    "parents": ["P022", "P049"],
+    "childId": "P074",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R031",
+    "type": "parent-child",
+    "parents": ["P050", "P023"],
+    "childId": "P076",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R032",
+    "type": "parent-child",
+    "parents": ["P027", "P037"],
+    "childId": "P078",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R033",
+    "type": "parent-child",
+    "parents": ["P027", "P037"],
+    "childId": "P079",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R034",
+    "type": "parent-child",
+    "parents": ["P028", "P038"],
+    "childId": "P081",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R035",
+    "type": "parent-child",
+    "parents": ["P086", "P061"],
+    "childId": "P088",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R036",
+    "type": "parent-child",
+    "parents": ["P092", "P065"],
+    "childId": "P093",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R037",
+    "type": "parent-child",
+    "parents": ["P030", "P039"],
+    "childId": "P094",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R038",
+    "type": "parent-child",
+    "parents": ["P097", "P095"],
+    "childId": "P099",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R039",
+    "type": "parent-child",
+    "parents": ["P042", "P033"],
+    "childId": "P104",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R040",
+    "type": "parent-child",
+    "parents": ["P034", "P043"],
+    "childId": "P107",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R041",
+    "type": "parent-child",
+    "parents": ["P044", "P035"],
+    "childId": "P108",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R042",
+    "type": "parent-child",
+    "parents": ["P036", "P045"],
+    "childId": "P110",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R043",
+    "type": "parent-child",
+    "parents": ["P036", "P045"],
+    "childId": "P111",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R044",
+    "type": "parent-child",
+    "parents": ["P112", "P103"],
+    "childId": "P114",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R045",
+    "type": "parent-child",
+    "parents": ["P123", "P025"],
+    "childId": "P124",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R046",
+    "type": "parent-child",
+    "parents": ["P123", "P025"],
+    "childId": "P125",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R047",
+    "type": "parent-child",
+    "parents": ["P123", "P025"],
+    "childId": "P126",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R048",
+    "type": "parent-child",
+    "parents": ["P123", "P025"],
+    "childId": "P127",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R049",
+    "type": "parent-child",
+    "parents": ["P081", "P133"],
+    "childId": "P135",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R050",
+    "type": "parent-child",
+    "parents": ["P066", "P138"],
+    "childId": "P139",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R051",
+    "type": "parent-child",
+    "parents": ["P069", "P068"],
+    "childId": "P140",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R052",
+    "type": "parent-child",
+    "parents": ["P104", "P122"],
+    "childId": "P142",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R053",
+    "type": "parent-child",
+    "parents": ["P064", "P115"],
+    "childId": "P143",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R054",
+    "type": "parent-child",
+    "parents": ["P064", "P115"],
+    "childId": "P149",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R055",
+    "type": "parent-child",
+    "parents": ["P148", "P075"],
+    "childId": "P151",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R056",
+    "type": "parent-child",
+    "parents": ["P060", "P152"],
+    "childId": "P153",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R057",
+    "type": "parent-child",
+    "parents": ["P144", "P073"],
+    "childId": "P155",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R058",
+    "type": "parent-child",
+    "parents": ["P156", "P109"],
+    "childId": "P157",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R059",
+    "type": "parent-child",
+    "parents": ["P076", "P161"],
+    "childId": "P162",
+    "startDate": null,
+    "childRole": "son"
+  },
+
+  {
+    "id": "R060",
+    "type": "parent-child",
+    "parents": ["P010", "P003"],
+    "childId": "P007",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R061",
+    "type": "parent-child",
+    "parents": ["P004", "P013"],
+    "childId": "P023",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R062",
+    "type": "parent-child",
+    "parents": ["P005", "P012"],
+    "childId": "P025",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R063",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P029",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R064",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P033",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R065",
+    "type": "parent-child",
+    "parents": ["P011", "P006"],
+    "childId": "P035",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R066",
+    "type": "parent-child",
+    "parents": ["P014", "P007"],
+    "childId": "P055",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R067",
+    "type": "parent-child",
+    "parents": ["P008", "P015"],
+    "childId": "P059",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R068",
+    "type": "parent-child",
+    "parents": ["P017", "P029"],
+    "childId": "P061",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R069",
+    "type": "parent-child",
+    "parents": ["P017", "P029"],
+    "childId": "P062",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R070",
+    "type": "parent-child",
+    "parents": ["P017", "P029"],
+    "childId": "P063",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R071",
+    "type": "parent-child",
+    "parents": ["P018", "P046"],
+    "childId": "P065",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R072",
+    "type": "parent-child",
+    "parents": ["P018", "P046"],
+    "childId": "P067",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R073",
+    "type": "parent-child",
+    "parents": ["P018", "P046"],
+    "childId": "P068",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R074",
+    "type": "parent-child",
+    "parents": ["P020", "P047"],
+    "childId": "P070",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R075",
+    "type": "parent-child",
+    "parents": ["P021", "P048"],
+    "childId": "P072",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R076",
+    "type": "parent-child",
+    "parents": ["P022", "P049"],
+    "childId": "P073",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R077",
+    "type": "parent-child",
+    "parents": ["P050", "P023"],
+    "childId": "P075",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R078",
+    "type": "parent-child",
+    "parents": ["P027", "P037"],
+    "childId": "P077",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R079",
+    "type": "parent-child",
+    "parents": ["P028", "P038"],
+    "childId": "P080",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R080",
+    "type": "parent-child",
+    "parents": ["P028", "P038"],
+    "childId": "P082",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R081",
+    "type": "parent-child",
+    "parents": ["P083", "P077"],
+    "childId": "P084",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R082",
+    "type": "parent-child",
+    "parents": ["P086", "P061"],
+    "childId": "P087",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R083",
+    "type": "parent-child",
+    "parents": ["P089", "P063"],
+    "childId": "P090",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R084",
+    "type": "parent-child",
+    "parents": ["P089", "P063"],
+    "childId": "P091",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R085",
+    "type": "parent-child",
+    "parents": ["P030", "P039"],
+    "childId": "P095",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R086",
+    "type": "parent-child",
+    "parents": ["P030", "P039"],
+    "childId": "P096",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R087",
+    "type": "parent-child",
+    "parents": ["P095", "P097"],
+    "childId": "P098",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R088",
+    "type": "parent-child",
+    "parents": ["P031", "P040"],
+    "childId": "P100",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R089",
+    "type": "parent-child",
+    "parents": ["P031", "P040"],
+    "childId": "P101",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R090",
+    "type": "parent-child",
+    "parents": ["P032", "P041"],
+    "childId": "P102",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R091",
+    "type": "parent-child",
+    "parents": ["P042", "P033"],
+    "childId": "P103",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R092",
+    "type": "parent-child",
+    "parents": ["P034", "P043"],
+    "childId": "P105",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R093",
+    "type": "parent-child",
+    "parents": ["P034", "P043"],
+    "childId": "P106",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R094",
+    "type": "parent-child",
+    "parents": ["P044", "P035"],
+    "childId": "P109",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R095",
+    "type": "parent-child",
+    "parents": ["P112", "P103"],
+    "childId": "P113",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R096",
+    "type": "parent-child",
+    "parents": ["P117", "P102"],
+    "childId": "P118",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R097",
+    "type": "parent-child",
+    "parents": ["P094", "P116"],
+    "childId": "P121",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R098",
+    "type": "parent-child",
+    "parents": ["P081", "P133"],
+    "childId": "P134",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R099",
+    "type": "parent-child",
+    "parents": ["P092", "P065"],
+    "childId": "P136",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R100",
+    "type": "parent-child",
+    "parents": ["P112", "P103"],
+    "childId": "P137",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R101",
+    "type": "parent-child",
+    "parents": ["P104", "P122"],
+    "childId": "P141",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R102",
+    "type": "parent-child",
+    "parents": ["P132", "P070"],
+    "childId": "P145",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R103",
+    "type": "parent-child",
+    "parents": ["P066", "P138"],
+    "childId": "P146",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R104",
+    "type": "parent-child",
+    "parents": ["P144", "P073"],
+    "childId": "P147",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R105",
+    "type": "parent-child",
+    "parents": ["P132", "P070"],
+    "childId": "P150",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R106",
+    "type": "parent-child",
+    "parents": ["P060", "P152"],
+    "childId": "P154",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R107",
+    "type": "parent-child",
+    "parents": ["P071", "P158"],
+    "childId": "P163",
+    "startDate": null,
+    "childRole": "daughter"
+  },
+  {
+    "id": "R108",
+    "type": "spouse",
+    "personAId": "P004",
+    "personBId": "P013",
+    "startDate": null
+  },
+  {
+    "id": "R109",
+    "type": "spouse",
+    "personAId": "P005",
+    "personBId": "P012",
+    "startDate": null
+  },
+  {
+    "id": "R110",
+    "type": "spouse",
+    "personAId": "P008",
+    "personBId": "P015",
+    "startDate": null
+  },
+  {
+    "id": "R111",
+    "type": "spouse",
+    "personAId": "P009",
+    "personBId": "P016",
+    "startDate": null
+  },
+  {
+    "id": "R112",
+    "type": "spouse",
+    "personAId": "P010",
+    "personBId": "P003",
+    "startDate": null
+  },
+  {
+    "id": "R113",
+    "type": "spouse",
+    "personAId": "P011",
+    "personBId": "P006",
+    "startDate": null
+  },
+  {
+    "id": "R114",
+    "type": "spouse",
+    "personAId": "P014",
+    "personBId": "P007",
+    "startDate": null
+  },
+  {
+    "id": "R115",
+    "type": "spouse",
+    "personAId": "P017",
+    "personBId": "P029",
+    "startDate": null
+  },
+  {
+    "id": "R116",
+    "type": "spouse",
+    "personAId": "P018",
+    "personBId": "P046",
+    "startDate": null
+  },
+  {
+    "id": "R117",
+    "type": "spouse",
+    "personAId": "P020",
+    "personBId": "P047",
+    "startDate": null
+  },
+  {
+    "id": "R118",
+    "type": "spouse",
+    "personAId": "P021",
+    "personBId": "P048",
+    "startDate": null
+  },
+  {
+    "id": "R119",
+    "type": "spouse",
+    "personAId": "P022",
+    "personBId": "P049",
+    "startDate": null
+  },
+  {
+    "id": "R120",
+    "type": "spouse",
+    "personAId": "P024",
+    "personBId": "P026",
+    "startDate": null
+  },
+  {
+    "id": "R121",
+    "type": "spouse",
+    "personAId": "P027",
+    "personBId": "P037",
+    "startDate": null
+  },
+  {
+    "id": "R122",
+    "type": "spouse",
+    "personAId": "P028",
+    "personBId": "P038",
+    "startDate": null
+  },
+  {
+    "id": "R123",
+    "type": "spouse",
+    "personAId": "P030",
+    "personBId": "P039",
+    "startDate": null
+  },
+  {
+    "id": "R124",
+    "type": "spouse",
+    "personAId": "P031",
+    "personBId": "P040",
+    "startDate": null
+  },
+  {
+    "id": "R125",
+    "type": "spouse",
+    "personAId": "P032",
+    "personBId": "P041",
+    "startDate": null
+  },
+  {
+    "id": "R126",
+    "type": "spouse",
+    "personAId": "P034",
+    "personBId": "P043",
+    "startDate": null
+  },
+  {
+    "id": "R127",
+    "type": "spouse",
+    "personAId": "P036",
+    "personBId": "P045",
+    "startDate": null
+  },
+  {
+    "id": "R128",
+    "type": "spouse",
+    "personAId": "P042",
+    "personBId": "P033",
+    "startDate": null
+  },
+  {
+    "id": "R129",
+    "type": "spouse",
+    "personAId": "P044",
+    "personBId": "P035",
+    "startDate": null
+  },
+  {
+    "id": "R130",
+    "type": "spouse",
+    "personAId": "P050",
+    "personBId": "P023",
+    "startDate": null
+  },
+  {
+    "id": "R131",
+    "type": "spouse",
+    "personAId": "P051",
+    "personBId": "P056",
+    "startDate": null
+  },
+  {
+    "id": "R132",
+    "type": "spouse",
+    "personAId": "P052",
+    "personBId": "P057",
+    "startDate": null
+  },
+  {
+    "id": "R133",
+    "type": "spouse",
+    "personAId": "P053",
+    "personBId": "P059",
+    "startDate": null
+  },
+  {
+    "id": "R134",
+    "type": "spouse",
+    "personAId": "P058",
+    "personBId": "P055",
+    "startDate": null
+  },
+  {
+    "id": "R135",
+    "type": "spouse",
+    "personAId": "P064",
+    "personBId": "P115",
+    "startDate": null
+  },
+  {
+    "id": "R136",
+    "type": "spouse",
+    "personAId": "P069",
+    "personBId": "P068",
+    "startDate": null
+  },
+  {
+    "id": "R137",
+    "type": "spouse",
+    "personAId": "P083",
+    "personBId": "P077",
+    "startDate": null
+  },
+  {
+    "id": "R138",
+    "type": "spouse",
+    "personAId": "P085",
+    "personBId": "P077",
+    "startDate": null
+  },
+  {
+    "id": "R139",
+    "type": "spouse",
+    "personAId": "P086",
+    "personBId": "P061",
+    "startDate": null
+  },
+  {
+    "id": "R140",
+    "type": "spouse",
+    "personAId": "P089",
+    "personBId": "P063",
+    "startDate": null
+  },
+  {
+    "id": "R141",
+    "type": "spouse",
+    "personAId": "P092",
+    "personBId": "P065",
+    "startDate": null
+  },
+  {
+    "id": "R142",
+    "type": "spouse",
+    "personAId": "P094",
+    "personBId": "P116",
+    "startDate": null
+  },
+  {
+    "id": "R143",
+    "type": "spouse",
+    "personAId": "P097",
+    "personBId": "P095",
+    "startDate": null
+  },
+  {
+    "id": "R144",
+    "type": "spouse",
+    "personAId": "P112",
+    "personBId": "P103",
+    "startDate": null
+  },
+  {
+    "id": "R145",
+    "type": "spouse",
+    "personAId": "P117",
+    "personBId": "P102",
+    "startDate": null
+  },
+  {
+    "id": "R146",
+    "type": "spouse",
+    "personAId": "P119",
+    "personBId": "P101",
+    "startDate": null
+  },
+  {
+    "id": "R147",
+    "type": "spouse",
+    "personAId": "P120",
+    "personBId": "P100",
+    "startDate": null
+  },
+  {
+    "id": "R148",
+    "type": "spouse",
+    "personAId": "P104",
+    "personBId": "P122",
+    "startDate": null
+  },
+  {
+    "id": "R149",
+    "type": "spouse",
+    "personAId": "P123",
+    "personBId": "P025",
+    "startDate": null
+  },
+  {
+    "id": "R150",
+    "type": "spouse",
+    "personAId": "P124",
+    "personBId": "P128",
+    "startDate": null
+  },
+  {
+    "id": "R151",
+    "type": "spouse",
+    "personAId": "P125",
+    "personBId": "P129",
+    "startDate": null
+  },
+  {
+    "id": "R152",
+    "type": "spouse",
+    "personAId": "P126",
+    "personBId": "P130",
+    "startDate": null
+  },
+  {
+    "id": "R153",
+    "type": "spouse",
+    "personAId": "P127",
+    "personBId": "P131",
+    "startDate": null
+  },
+  {
+    "id": "R154",
+    "type": "spouse",
+    "personAId": "P132",
+    "personBId": "P070",
+    "startDate": null
+  },
+  {
+    "id": "R155",
+    "type": "spouse",
+    "personAId": "P081",
+    "personBId": "P133",
+    "startDate": null
+  },
+  {
+    "id": "R156",
+    "type": "spouse",
+    "personAId": "P066",
+    "personBId": "P138",
+    "startDate": null
+  },
+  {
+    "id": "R157",
+    "type": "spouse",
+    "personAId": "P144",
+    "personBId": "P073",
+    "startDate": null
+  },
+  {
+    "id": "R158",
+    "type": "spouse",
+    "personAId": "P148",
+    "personBId": "P075",
+    "startDate": null
+  },
+  {
+    "id": "R159",
+    "type": "spouse",
+    "personAId": "P060",
+    "personBId": "P152",
+    "startDate": null
+  },
+  {
+    "id": "R160",
+    "type": "spouse",
+    "personAId": "P156",
+    "personBId": "P109",
+    "startDate": null
+  },
+  {
+    "id": "R161",
+    "type": "spouse",
+    "personAId": "P071",
+    "personBId": "P158",
+    "startDate": null
+  },
+  {
+    "id": "R162",
+    "type": "spouse",
+    "personAId": "P074",
+    "personBId": "P160",
+    "startDate": null
+  },
+  {
+    "id": "R163",
+    "type": "spouse",
+    "personAId": "P110",
+    "personBId": "P159",
+    "startDate": null
+  },
+  {
+    "id": "R164",
+    "type": "spouse",
+    "personAId": "P159",
+    "personBId": "P074",
+    "startDate": null
+  },
+  {
+    "id": "R165",
+    "type": "spouse",
+    "personAId": "P076",
+    "personBId": "P161",
+    "startDate": null
+  },
+  {
+    "id": "R166",
+    "type": "spouse",
+    "personAId": "P164",
+    "personBId": "P137",
+    "startDate": null
   }
 ]

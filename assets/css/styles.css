@@ -197,10 +197,33 @@ body {
   font-size: 12px;
 }
 
+.card > div {
+  padding-right: 44px; /* reserve space for top-right ID badge */
+}
+
+.card .name {
+  overflow-wrap: anywhere; /* allow long names to wrap before overlapping badges */
+}
+
 .gen-badge {
   position: absolute;
   right: 6px;
   bottom: 6px;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--text);
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid #1a2639;
+  padding: 4px 6px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+}
+
+.id-badge {
+  position: absolute;
+  right: 6px;
+  top: 6px;
   font-size: 11px;
   line-height: 1;
   color: var(--text);

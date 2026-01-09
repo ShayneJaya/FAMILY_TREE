@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Transparent background silhouette placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Portrait placeholder">
+  <title>Portrait placeholder</title>
+  <desc>Generic head-and-shoulders silhouette with transparent background</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9CA3AF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#9CA3AF" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)">
+    <!-- Head -->
+    <circle cx="128" cy="92" r="44"/>
+    <!-- Shoulders/chest -->
+    <path d="M40 208c0-42 39.8-64 88-64s88 22 88 64v8H40z"/>
+  </g>
+</svg>

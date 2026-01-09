@@ -31,7 +31,31 @@ export function renderDirectory(listEl, people, selectedId = null) {
     return;
   }
 
-  const items = people
+  const sorted = [...people].sort((a, b) => {
+    const ga = a.generation;
+    const gb = b.generation;
+
+    const na =
+      ga === undefined || ga === null || String(ga).trim() === ""
+        ? Number.POSITIVE_INFINITY
+        : Number(ga);
+    const nb =
+      gb === undefined || gb === null || String(gb).trim() === ""
+        ? Number.POSITIVE_INFINITY
+        : Number(gb);
+
+    if (na !== nb) return na - nb;
+
+    const la = (a.lastName || "").toLowerCase();
+    const lb = (b.lastName || "").toLowerCase();
+    if (la !== lb) return la.localeCompare(lb);
+
+    const fa = (a.firstName || "").toLowerCase();
+    const fb = (b.firstName || "").toLowerCase();
+    return fa.localeCompare(fb);
+  });
+
+  const items = sorted
     .map((p) => {
       const name = fullName(p) || p.id || "Unknown";
       const lifespan = fmtLifespan(p);
@@ -44,6 +68,12 @@ export function renderDirectory(listEl, people, selectedId = null) {
               String(gen)
             )}</span>`
           : "";
+      const idNumMatch = p.id ? String(p.id).match(/(\d+)/) : null;
+      const idDisplay =
+        idNumMatch && idNumMatch[1] ? String(Number(idNumMatch[1])) : "";
+      const idBadge = idDisplay
+        ? `<span class="id-badge" title="ID">${escapeHtml(idDisplay)}</span>`
+        : "";
       return `
       <li class="card${selectedCls}" data-id="${
         p.id
@@ -58,6 +88,7 @@ export function renderDirectory(listEl, people, selectedId = null) {
             .join(" • ")}</div>
         </div>
         ${genBadge}
+        ${idBadge}
       </li>`;
     })
     .join("");
@@ -167,6 +198,10 @@ export function renderDetails(
   const photo = getPhotoUrl(person);
   const name = fullName(person) || person.id || "Unknown";
   const lifespan = fmtLifespan(person);
+  const birthPlace =
+    person.placeBirth && String(person.placeBirth).trim().length
+      ? String(person.placeBirth).trim()
+      : "";
 
   const list = (arr) =>
     arr.length
@@ -188,6 +223,11 @@ export function renderDetails(
         <div class="sub">${[lifespan, person.occupation]
           .filter(Boolean)
           .join(" • ")}</div>
+        ${
+          birthPlace
+            ? `<div class="sub">Born in ${escapeHtml(birthPlace)}</div>`
+            : ""
+        }
       </div>
     </div>
 

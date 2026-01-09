@@ -27,19 +27,44 @@ function updateCount() {
 }
 
 function applyFilter(q) {
-  const query = (q || "").trim().toLowerCase();
+  const raw = (q || "").trim();
+  const query = raw.toLowerCase();
+
   if (!query) {
     state.filtered = [...state.people];
   } else {
-    state.filtered = state.people.filter((p) => {
-      const name = [p.firstName, p.lastName]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      const id = String(p.id || "").toLowerCase();
-      return name.includes(query) || id.includes(query);
-    });
+    // Modes:
+    // - Generation: ONLY when prefixed "g" (e.g., "g5", "G 5")
+    // - ID: "p101" or numeric-only "101" (matches numeric part of ID, ignores leading zeros)
+    // - Fallback: partial match on name or ID (case-insensitive)
+    const genMatch = query.match(/^g\s*(\d+)$/i);
+    const idPrefixed = query.match(/^p\s*0*(\d+)$/i);
+    const numericOnly = query.match(/^\d+$/);
+
+    if (genMatch) {
+      const genNum = Number(genMatch[1]);
+      state.filtered = state.people.filter(
+        (p) => Number(p.generation) === genNum
+      );
+    } else if (idPrefixed || numericOnly) {
+      const idNum = idPrefixed ? Number(idPrefixed[1]) : Number(query);
+      state.filtered = state.people.filter((p) => {
+        const m = String(p.id || "").match(/(\d+)/);
+        return m && Number(m[1]) === idNum;
+      });
+    } else {
+      // name or id partial (case-insensitive)
+      state.filtered = state.people.filter((p) => {
+        const name = [p.firstName, p.lastName]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        const id = String(p.id || "").toLowerCase();
+        return name.includes(query) || id.includes(query);
+      });
+    }
   }
+
   renderDirectory(els.list, state.filtered, state.selectedId);
   updateCount();
 }
