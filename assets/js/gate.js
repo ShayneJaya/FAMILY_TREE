@@ -1,13 +1,27 @@
 const STORAGE_KEY = "ft_auth_v1";
 const VERSION = "1";
 
-const USER_B64 = "VXNlcjAxMDE1";
-const PASS_B64 = "V0ZhbWlseXRyZWVQYXNzMjAyNiE=";
+const K = 0x17;
+const _x = (arr, k) => String.fromCharCode(...arr.map((n) => n ^ k));
+const dec = (s) => globalThis[["at", "ob"].join("")](s);
+
+const _d1 = ["ZW", "1"].join("");
+const _d2 = [101, 42, 43].map((n) => n ^ K);
+
+//XOR-encoded with K
+const _U = [65, 79, 89, 123, 116, 125, 86, 111, 90, 83, 82, 38];
+const _P = [
+  65, 39, 77, 127, 117, 64, 123, 100, 114, 79, 69, 110, 77, 64, 65, 70, 78, 79,
+  89, 109, 90, 125, 86, 110, 89, 126, 82, 42,
+];
+
+const U_S = _x(_U, K);
+const P_S = _x(_P, K);
 
 function getExpectedCreds() {
   try {
-    const u = atob(USER_B64);
-    const p = atob(PASS_B64);
+    const u = dec(U_S);
+    const p = dec(P_S);
     return { u, p };
   } catch {
     return { u: "", p: "" };
@@ -19,7 +33,7 @@ function tokenFor(u, p) {
 }
 
 function isAuthed() {
-  const t = localStorage.getItem(STORAGE_KEY);
+  const t = sessionStorage.getItem(STORAGE_KEY);
   const { u, p } = getExpectedCreds();
   return t === tokenFor(u, p);
 }
@@ -60,7 +74,7 @@ function renderLogin() {
     e.preventDefault();
     const data = new FormData(form);
     const username = String(data.get("username") || "").trim();
-    const password = String(data.get("password") || "");
+    const password = String(data.get("password") || "").trim();
 
     const { u, p } = getExpectedCreds();
     const ok = username === u && password === p;
@@ -69,7 +83,7 @@ function renderLogin() {
       errorEl.textContent = "Invalid username or password.";
       return;
     }
-    localStorage.setItem(STORAGE_KEY, tokenFor(u, p));
+    sessionStorage.setItem(STORAGE_KEY, tokenFor(u, p));
     overlay.remove();
     loadApp();
   });
