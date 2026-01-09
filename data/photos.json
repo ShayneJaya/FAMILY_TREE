@@ -1,7 +1,7 @@
 [
   {
     "id": "PH001",
-    "src": "assets/img/portraits/AncestorsFamily.jpg",
+    "src": "assets/img/portraits/MP001.jpg",
     "people": ["P001", "P002", "P003", "P004", "P005", "P006"],
     "date": null,
     "caption": "Family Photo"
@@ -14,10 +14,17 @@
     "caption": "Photographed in 1993"
   },
   {
-    "id": "PH002",
+    "id": "PH003",
     "src": "assets/img/portraits/P006.jpg",
     "people": ["P006"],
     "date": "1993",
     "caption": "Photographed in 1993"
+  },
+  {
+    "id": "PH004",
+    "src": "assets/img/portraits/MP007.jpg",
+    "people": ["P008"],
+    "date": "1993",
+    "caption": "Siripala, Kusum with daughter in law"
   }
 ]

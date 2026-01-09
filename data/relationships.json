@@ -9,15 +9,33 @@
   {
     "id": "R002",
     "type": "parent-child",
-    "parentId": "P001",
+    "parents": ["P001", "P002"],
     "childId": "P003",
-    "startDate": null
+    "startDate": null,
+    "childRole": "daughter"
   },
   {
     "id": "R003",
     "type": "parent-child",
-    "parentId": "P002",
-    "childId": "P003",
-    "startDate": null
+    "parents": ["P001", "P002"],
+    "childId": "P004",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R004",
+    "type": "parent-child",
+    "parents": ["P001", "P002"],
+    "childId": "P005",
+    "startDate": null,
+    "childRole": "son"
+  },
+  {
+    "id": "R005",
+    "type": "parent-child",
+    "parents": ["P001", "P002"],
+    "childId": "P006",
+    "startDate": null,
+    "childRole": "daughter"
   }
 ]

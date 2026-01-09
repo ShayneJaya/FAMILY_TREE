@@ -37,6 +37,13 @@ export function renderDirectory(listEl, people, selectedId = null) {
       const lifespan = fmtLifespan(p);
       const occupation = p.occupation ? String(p.occupation) : "";
       const selectedCls = selectedId && p.id === selectedId ? " selected" : "";
+      const gen = p.generation;
+      const genBadge =
+        gen !== undefined && gen !== null && String(gen).trim().length
+          ? `<span class="gen-badge" title="Generation">G${escapeHtml(
+              String(gen)
+            )}</span>`
+          : "";
       return `
       <li class="card${selectedCls}" data-id="${
         p.id
@@ -50,6 +57,7 @@ export function renderDirectory(listEl, people, selectedId = null) {
             .filter(Boolean)
             .join(" • ")}</div>
         </div>
+        ${genBadge}
       </li>`;
     })
     .join("");
@@ -69,15 +77,25 @@ function getSpouses(personId, relationships, peopleById) {
     .filter(Boolean);
 }
 function getParents(personId, relationships, peopleById) {
-  return relationships
+  const ids = [];
+  relationships
     .filter((r) => r.type === "parent-child" && r.childId === personId)
-    .map((r) => r.parentId)
+    .forEach((r) => {
+      if (Array.isArray(r.parents)) ids.push(...r.parents);
+      else if (r.parentId) ids.push(r.parentId);
+    });
+  return Array.from(new Set(ids))
     .map((id) => peopleById.get(id))
     .filter(Boolean);
 }
 function getChildren(personId, relationships, peopleById) {
   return relationships
-    .filter((r) => r.type === "parent-child" && r.parentId === personId)
+    .filter(
+      (r) =>
+        r.type === "parent-child" &&
+        (r.parentId === personId ||
+          (Array.isArray(r.parents) && r.parents.includes(personId)))
+    )
     .map((r) => r.childId)
     .map((id) => peopleById.get(id))
     .filter(Boolean);
@@ -104,6 +122,20 @@ export function renderDetails(
   const spouses = getSpouses(person.id, relationships, peopleById);
   const parents = getParents(person.id, relationships, peopleById);
   const children = getChildren(person.id, relationships, peopleById);
+  const childRoleById = new Map(
+    relationships
+      .filter(
+        (r) =>
+          r.type === "parent-child" &&
+          (r.parentId === person.id ||
+            (Array.isArray(r.parents) && r.parents.includes(person.id)))
+      )
+      .map((r) => {
+        const g = peopleById.get(r.childId)?.gender;
+        const inferred = g === "F" ? "daughter" : g === "M" ? "son" : null;
+        return [r.childId, r.childRole || inferred];
+      })
+  );
   const personPhotos = Array.isArray(photos)
     ? photos.filter(
         (ph) => Array.isArray(ph.people) && ph.people.includes(person.id)
@@ -175,12 +207,45 @@ export function renderDetails(
 
     <div class="section">
       <h3>Parents</h3>
-      <div>${list(parents)}</div>
+      <div>${
+        parents.length
+          ? parents
+              .map((p) => {
+                const cls =
+                  p.gender === "F"
+                    ? " badge--girl"
+                    : p.gender === "M"
+                    ? " badge--boy"
+                    : "";
+                return `<span class="badge${cls}" data-person-id="${
+                  p.id
+                }" role="link" tabindex="0">${fullName(p) || p.id}</span>`;
+              })
+              .join(" ")
+          : '<span class="meta">None</span>'
+      }</div>
     </div>
 
     <div class="section">
       <h3>Children</h3>
-      <div>${list(children)}</div>
+      <div>${
+        children.length
+          ? children
+              .map((p) => {
+                const role = childRoleById.get(p.id);
+                const cls =
+                  role === "daughter"
+                    ? " badge--girl"
+                    : role === "son"
+                    ? " badge--boy"
+                    : "";
+                return `<span class="badge${cls}" data-person-id="${
+                  p.id
+                }" role="link" tabindex="0">${fullName(p) || p.id}</span>`;
+              })
+              .join(" ")
+          : '<span class="meta">None</span>'
+      }</div>
     </div>
 
     <div class="section">

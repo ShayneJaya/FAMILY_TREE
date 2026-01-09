@@ -122,6 +122,28 @@ body {
   border-radius: 12px;
   padding: 10px;
   min-height: 70vh;
+  max-height: 70vh;
+  overflow: auto;
+  /* Subtle scrollbar (Firefox) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) rgba(11, 18, 32, 0.5);
+}
+
+/* Subtle scrollbar (WebKit) */
+.directory::-webkit-scrollbar {
+  width: 10px;
+}
+.directory::-webkit-scrollbar-track {
+  background: rgba(11, 18, 32, 0.5);
+  border-radius: 8px;
+}
+.directory::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 8px;
+  border: 2px solid rgba(11, 18, 32, 0.5);
+}
+.directory::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
 }
 .details {
   background: rgba(11, 18, 32, 0.75);
@@ -145,6 +167,7 @@ body {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 10px;
+  position: relative;
   padding: 8px;
   box-shadow: var(--shadow);
   cursor: pointer;
@@ -172,6 +195,21 @@ body {
 .card .meta {
   color: var(--muted);
   font-size: 12px;
+}
+
+.gen-badge {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--text);
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid #1a2639;
+  padding: 4px 6px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  pointer-events: none;
 }
 
 /* Selection highlight */
@@ -240,6 +278,16 @@ body {
   margin-right: 6px;
   margin-bottom: 6px;
   cursor: pointer;
+}
+
+.badge--boy {
+  background: rgba(96, 165, 250, 0.15); /* subtle blue tint */
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.badge--girl {
+  background: rgba(244, 114, 182, 0.15); /* subtle pink tint */
+  border-color: rgba(244, 114, 182, 0.35);
 }
 
 /* Empty/placeholder */

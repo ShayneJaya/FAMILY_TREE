@@ -88,5 +88,50 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/portraits/P006.jpg"
+  },
+  {
+    "id": "P007",
+    "firstName": "Somawathie",
+    "lastName": "Ranasinghe",
+    "generation": 3,
+    "placeBirth": "Divuldeniya, Sri Lanka",
+    "placeDeath": "Divuldeniya, Sri Lanka",
+    "remarks": "Photographed in 1993",
+    "gender": "F",
+    "birthDate": "Unknown",
+    "deathDate": "8th July 2012",
+    "occupation": "",
+    "bio": "",
+    "photo": "./assets/img/placeholders/placeholder.jpg"
+  },
+  {
+    "id": "P008",
+    "firstName": "Reginald",
+    "lastName": "Ranasinghe",
+    "generation": 3,
+    "placeBirth": "Divuldeniya, Sri Lanka.",
+    "placeDeath": "Divuldeniya, Sri Lanka",
+    "remarks": "Photographed in 1993",
+    "gender": "M",
+    "birthDate": "Unknown",
+    "deathDate": "8th July 2012",
+    "occupation": "",
+    "bio": "",
+    "photo": "./assets/img/placeholders/placeholder.jpg"
+  },
+  {
+    "id": "P009",
+    "firstName": "Siripala",
+    "lastName": "Ranasinghe",
+    "generation": 3,
+    "placeBirth": "Divuldeniya, Sri Lanka.",
+    "placeDeath": "Divuldeniya, Sri Lanka",
+    "remarks": "Photographed in 1993",
+    "gender": "M",
+    "birthDate": "4th Dec. 1941",
+    "deathDate": "16th Aug. 2012",
+    "occupation": "",
+    "bio": "",
+    "photo": "./assets/img/placeholders/placeholder.jpg"
   }
 ]
