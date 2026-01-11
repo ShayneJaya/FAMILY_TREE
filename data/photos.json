@@ -29,9 +29,36 @@
   },
   {
     "id": "PH005",
-    "src": "assets/img/portraits/P011.jpg",
-    "people": ["P011", "P006", "P027"],
+    "src": "assets/img/portraits/MP011.jpg",
+    "people": [
+      "P011",
+      "P006",
+      "P027",
+      "P028",
+      "P030",
+      "P031",
+      "P032",
+      "P033",
+      "P034",
+      "P036",
+      "P029",
+      "P035"
+    ],
     "date": "",
-    "caption": ""
+    "caption": "Family Photo",
+    "captions": {
+      "P011": "Seated left middle",
+      "P006": "Seated right middle",
+      "P027": "Standing left center",
+      "P028": "6th from left",
+      "P029": "Far Right",
+      "P030": "3rd from left",
+      "P031": "8th from left",
+      "P032": "7th from left",
+      "P033": "Far left",
+      "P034": "4th from left",
+      "P035": "2nd from left",
+      "P036": "2nd from right"
+    }
   }
 ]

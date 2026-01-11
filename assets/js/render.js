@@ -176,16 +176,19 @@ export function renderDetails(
     ? `<div class="gallery-grid">
           ${personPhotos
             .map((ph) => {
-              const cap =
-                ph.caption && String(ph.caption).trim().length
-                  ? `<div class="gallery-caption">${escapeHtml(
-                      String(ph.caption)
-                    )}</div>`
+              const specific =
+                ph.captions && ph.captions[person.id]
+                  ? String(ph.captions[person.id])
                   : "";
+              const fallback = ph.caption ? String(ph.caption) : "";
+              const capText = (specific || fallback).trim();
+              const cap = capText.length
+                ? `<div class="gallery-caption">${escapeHtml(capText)}</div>`
+                : "";
               return `<div class="gallery-item">
                         <a href="${ph.src}" target="_blank" rel="noopener">
                           <img src="${ph.src}" alt="${
-                ph.caption ? String(ph.caption) : "Photo"
+                capText || "Photo"
               }" loading="lazy" width="120" height="90"/>
                         </a>
                         ${cap}

@@ -103,6 +103,11 @@ function wireEvents() {
   els.details?.addEventListener("click", (e) => {
     const badge = e.target.closest("[data-person-id]");
     if (badge && badge.dataset.personId) {
+      // Clear search and reset directory when navigating within a profile
+      if (els.search) {
+        els.search.value = "";
+      }
+      applyFilter("");
       selectPerson(badge.dataset.personId);
       const li = els.list?.querySelector(
         `li[data-id="${badge.dataset.personId}"]`

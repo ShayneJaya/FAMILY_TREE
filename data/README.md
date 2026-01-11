@@ -55,7 +55,11 @@ photos.json (shape)
     "src": "assets/img/path/to/photo.jpg",
     "people": ["P001", "P002"],
     "date": "1992-05-10",
-    "caption": "Family gathering"
+    "caption": "Family gathering",
+    "captions": {
+      "P001": "Seated left",
+      "P002": "Standing 4th from the left"
+    }
   }
 ]
 
@@ -63,6 +67,7 @@ Notes
 - src: relative path to the image file (e.g., assets/img/portraits/P001.jpg or assets/img/family/party.jpg)
 - people: array of person IDs who appear in the photo; the photo will be shown on each listed person’s profile
 - date and caption are optional metadata; use ISO date (YYYY-MM-DD) if known
+- captions: optional per-person captions map; keys are person IDs (e.g., "P006"), values are strings. When present, the UI shows captions[person.id] for that person; otherwise it falls back to caption.
 
 Converting Excel → JSON
 Option A — Manual
