@@ -16,6 +16,10 @@ const els = {
   viewTreeBtn: document.getElementById("viewTreeBtn"),
 };
 
+const MOBILE_MAX_WIDTH = 900;
+const isMobile = () =>
+  window.matchMedia(`(max-width: ${MOBILE_MAX_WIDTH}px)`).matches;
+
 const state = {
   people: [],
   photos: [],
@@ -135,6 +139,9 @@ function selectPerson(id) {
 
 function setViewMode(mode) {
   if (mode !== "list" && mode !== "tree") return;
+  if (isMobile() && mode === "tree") {
+    mode = "list";
+  }
   state.viewMode = mode;
   document.body.classList.toggle("view-tree", mode === "tree");
 
@@ -154,6 +161,7 @@ function setViewMode(mode) {
   if (els.viewTreeBtn) {
     els.viewTreeBtn.classList.toggle("active", mode === "tree");
     els.viewTreeBtn.setAttribute("aria-selected", String(mode === "tree"));
+    els.viewTreeBtn.disabled = isMobile();
   }
 
   if (mode === "tree") {
@@ -216,10 +224,22 @@ function wireEvents() {
 
   // View toggle
   els.viewListBtn?.addEventListener("click", () => setViewMode("list"));
-  els.viewTreeBtn?.addEventListener("click", () => setViewMode("tree"));
+  els.viewTreeBtn?.addEventListener("click", (e) => {
+    if (isMobile()) {
+      e.preventDefault();
+      return;
+    }
+    setViewMode("tree");
+  });
 
-  // Resize handling for tree view
+  // Resize handling for tree view and responsive enforcement
   window.addEventListener("resize", () => {
+    if (isMobile() && state.viewMode === "tree") {
+      setViewMode("list");
+    }
+    if (els.viewTreeBtn) {
+      els.viewTreeBtn.disabled = isMobile();
+    }
     if (state.viewMode === "tree" && treeInstance) {
       treeInstance.resize();
       if (treeInstance.fit) treeInstance.fit();
@@ -238,6 +258,9 @@ async function main() {
   updateCount();
   setViewMode("list");
   wireEvents();
+  if (els.viewTreeBtn) {
+    els.viewTreeBtn.disabled = isMobile();
+  }
 }
 
 main();

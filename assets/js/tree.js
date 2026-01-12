@@ -543,6 +543,52 @@ export function createTreeView(
 
   const g = svg.append("g");
 
+  // Modern relationship path info card (overlay, not zoomed)
+  const pathCard = svg
+    .append("g")
+    .attr("class", "tree-path-card")
+    .style("pointer-events", "none")
+    .style("opacity", 0);
+
+  const pathCardRect = pathCard
+    .append("rect")
+    .attr("rx", 10)
+    .attr("ry", 10)
+    .attr("x", 12)
+    .attr("y", 12)
+    .attr("width", 280)
+    .attr("height", 58)
+    .style("fill", "#ffffff")
+    .style("stroke", "#e5e7eb")
+    .style("stroke-width", "1px");
+
+  const pathCardTitle = pathCard
+    .append("text")
+    .attr("class", "tree-path-card-title")
+    .attr("x", 28)
+    .attr("y", 36)
+    .style(
+      "font-family",
+      "system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+    )
+    .style("font-size", "14px")
+    .style("font-weight", "600")
+    .style("fill", "#111827")
+    .text("");
+
+  const pathCardSubtitle = pathCard
+    .append("text")
+    .attr("class", "tree-path-card-subtitle")
+    .attr("x", 28)
+    .attr("y", 56)
+    .style(
+      "font-family",
+      "system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+    )
+    .style("font-size", "12.5px")
+    .style("fill", "#374151")
+    .text("");
+
   // Zoom/pan
   const zoom = d3
     .zoom()
@@ -650,13 +696,13 @@ export function createTreeView(
     if (multi) {
       if (isException) {
         // Exception pair: use arch only to avoid crossings
-        arcEdges.push({ x1: a.x, x2: b.x, y: a.y });
+        arcEdges.push({ x1: a.x, x2: b.x, y: a.y, key });
       } else {
         // Default for multi-spouse: horizontal bar between spouses
-        lineEdges.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+        lineEdges.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y, key });
       }
     } else {
-      lineEdges.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+      lineEdges.push({ x1: a.x, y1: a.y, x2: b.x, y2: b.y, key });
     }
   });
 
@@ -689,6 +735,7 @@ export function createTreeView(
     .enter()
     .append("path")
     .attr("class", "tree-spouse")
+    .attr("data-pair-key", (d) => d.key)
     .attr(
       "d",
       (d) =>
@@ -702,6 +749,7 @@ export function createTreeView(
     .enter()
     .append("line")
     .attr("class", "tree-spouse")
+    .attr("data-pair-key", (d) => d.key)
     .attr("x1", (d) => d.x1)
     .attr("y1", (d) => d.y1)
     .attr("x2", (d) => d.x2)
@@ -722,10 +770,15 @@ export function createTreeView(
     })
     .attr("transform", (d) => `translate(${d.x},${d.y})`)
     .style("cursor", "pointer")
-    .on("click", (_event, d) => {
-      setSelected(d.data.id);
-      if (typeof options.onSelect === "function") {
-        options.onSelect(d.data.id);
+    .on("click", (event, d) => {
+      const id = d.data.id;
+      if (event.shiftKey && selectedId && id !== selectedId) {
+        setCompare(id);
+      } else {
+        setSelected(id);
+        if (typeof options.onSelect === "function") {
+          options.onSelect(id);
+        }
       }
     })
     .on("dblclick", (_event, d) => {
@@ -746,9 +799,348 @@ export function createTreeView(
 
   // Selection handling
   let selectedId = null;
+  let compareId = null;
+  let currentPath = null;
+
+  // Relationship path utilities
+  function buildIndexes() {
+    // spouse key set: hubKey(aId,bId)
+    const spouseKeys = new Set();
+    relationships
+      .filter((r) => r.type === "spouse")
+      .forEach((r) => spouseKeys.add(hubKey(r.personAId, r.personBId)));
+    // child -> set(parents)
+    const childParents = new Map();
+    relationships
+      .filter((r) => r.type === "parent-child")
+      .forEach((r) => {
+        const child = r.childId;
+        if (!child) return;
+        if (!childParents.has(child)) childParents.set(child, new Set());
+        if (Array.isArray(r.parents) && r.parents.length) {
+          r.parents.forEach((p) => childParents.get(child).add(p));
+        } else if (r.parentId) {
+          childParents.get(child).add(r.parentId);
+        }
+      });
+    const peopleById = new Map(people.map((p) => [p.id, p]));
+    return { spouseKeys, childParents, peopleById };
+  }
+  function buildAdjacency() {
+    const adj = new Map();
+    const link = (u, v) => {
+      if (!u || !v) return;
+      if (!adj.has(u)) adj.set(u, new Set());
+      if (!adj.has(v)) adj.set(v, new Set());
+      adj.get(u).add(v);
+      adj.get(v).add(u);
+    };
+    relationships.forEach((r) => {
+      if (r.type === "spouse") {
+        link(r.personAId, r.personBId);
+      } else if (r.type === "parent-child") {
+        const c = r.childId;
+        if (!c) return;
+        if (Array.isArray(r.parents) && r.parents.length) {
+          r.parents.forEach((p) => link(p, c));
+        } else if (r.parentId) {
+          link(r.parentId, c);
+        }
+      }
+    });
+    return adj;
+  }
+  function bfsPath(start, goal, adj) {
+    if (start === goal) return [start];
+    const q = [start];
+    const prev = new Map([[start, null]]);
+    while (q.length) {
+      const u = q.shift();
+      for (const v of adj.get(u) || []) {
+        if (!prev.has(v)) {
+          prev.set(v, u);
+          if (v === goal) {
+            // reconstruct
+            const path = [v];
+            let cur = u;
+            while (cur) {
+              path.push(cur);
+              cur = prev.get(cur);
+            }
+            return path.reverse();
+          }
+          q.push(v);
+        }
+      }
+    }
+    return null;
+  }
+  // Detailed kinship computation using nearest common ancestor (blood relation) and path for marriage
+  function computeKinshipLabel(peopleById, childParents, spouseKeys, pathIds) {
+    if (!pathIds || pathIds.length < 2) return { label: "" };
+
+    // In-law detection before ancestor-based kinship
+    const a = pathIds[0];
+    const b = pathIds[pathIds.length - 1];
+    const shareParent = (u, v) => {
+      const pu = childParents.get(u);
+      const pv = childParents.get(v);
+      if (!pu || !pv) return false;
+      for (const p of pu) {
+        if (pv.has(p)) return true;
+      }
+      return false;
+    };
+    const isSpouse = (u, v) => spouseKeys.has(hubKey(u, v));
+    const isParentOf = (u, v) => childParents.get(v)?.has(u) || false;
+
+    if (pathIds.length >= 2) {
+      // sibling-in-law: A is spouse of X and X is sibling of B (or symmetric on B side)
+      if (pathIds.length >= 3) {
+        const a1 = pathIds[1];
+        const bm1 = pathIds[pathIds.length - 2];
+        if (
+          (isSpouse(a, a1) && shareParent(a1, b)) ||
+          (isSpouse(b, bm1) && shareParent(bm1, a))
+        ) {
+          // Use the first person's gender for a friendly label
+          const ga = peopleById.get(a)?.gender;
+          let label = "sibling-in-law";
+          if (ga === "F") label = "sister-in-law";
+          else if (ga === "M") label = "brother-in-law";
+          return { label };
+        }
+      }
+      // parent-in-law / child-in-law: A spouse of X; B parent of X (or symmetric)
+      if (pathIds.length >= 3) {
+        const a1 = pathIds[1];
+        const bm1 = pathIds[pathIds.length - 2];
+        if (isSpouse(a, a1) && isParentOf(b, a1)) {
+          const gb = peopleById.get(b)?.gender;
+          let label = "parent-in-law";
+          if (gb === "F") label = "mother-in-law";
+          else if (gb === "M") label = "father-in-law";
+          return { label };
+        }
+        if (isSpouse(b, bm1) && isParentOf(a, bm1)) {
+          const ga = peopleById.get(a)?.gender;
+          let label = "parent-in-law";
+          if (ga === "F") label = "mother-in-law";
+          else if (ga === "M") label = "father-in-law";
+          return { label };
+        }
+      }
+    }
+
+    function ancestorsMap(start) {
+      const m = new Map();
+      const q = [{ id: start, d: 0 }];
+      const seen = new Set([start]);
+      while (q.length) {
+        const { id, d } = q.shift();
+        const parents = childParents.get(id);
+        if (!parents) continue;
+        for (const p of parents) {
+          if (!m.has(p)) m.set(p, d + 1);
+          if (!seen.has(p)) {
+            seen.add(p);
+            q.push({ id: p, d: d + 1 });
+          }
+        }
+      }
+      return m;
+    }
+
+    const ancA = ancestorsMap(a);
+    const ancB = ancestorsMap(b);
+
+    // Find nearest common ancestor by minimal sum distance
+    let best = null;
+    for (const [anc, dA] of ancA.entries()) {
+      const dB = ancB.get(anc);
+      if (dB !== undefined) {
+        const sum = dA + dB;
+        if (!best || sum < best.sum) best = { anc, dA, dB, sum };
+      }
+    }
+
+    // Determine if path includes any marriage step (same-generation move)
+    let viaMarriage = false;
+    for (let i = 0; i < pathIds.length - 1; i++) {
+      const u = pathIds[i];
+      const v = pathIds[i + 1];
+      if (spouseKeys.has(hubKey(u, v))) {
+        viaMarriage = true;
+        break;
+      }
+    }
+
+    function ordinal(n) {
+      const map = {
+        1: "first",
+        2: "second",
+        3: "third",
+        4: "fourth",
+        5: "fifth",
+        6: "sixth",
+        7: "seventh",
+        8: "eighth",
+        9: "ninth",
+        10: "tenth",
+      };
+      return map[n] || `${n}th`;
+    }
+
+    // Direct ancestor/descendant if one is ancestor of the other
+    if (best && (best.dA === 0 || best.dB === 0)) {
+      const up = best.dA === 0 ? best.dB : best.dA; // generations apart
+      let label;
+      if (up === 1) label = best.dA === 0 ? "child" : "parent";
+      else if (up === 2) label = best.dA === 0 ? "grandchild" : "grandparent";
+      else {
+        const times = `${up - 2}x`;
+        label =
+          best.dA === 0
+            ? `${times} great-grandchild`
+            : `${times} great-grandparent`;
+      }
+      if (viaMarriage) label += " (via marriage)";
+      return { label };
+    }
+
+    // Siblings
+    if (best && best.dA === 1 && best.dB === 1) {
+      let label = "siblings";
+      if (viaMarriage) label += " (via marriage)";
+      return { label };
+    }
+
+    // Cousins (both must be >= 1 to a common ancestor)
+    if (best && best.dA >= 1 && best.dB >= 1) {
+      const degree = Math.min(best.dA, best.dB) - 1;
+      const removed = Math.abs(best.dA - best.dB);
+      let label = `${ordinal(degree)} cousin`;
+      if (removed === 1) label += " once removed";
+      else if (removed > 1) label += ` ${removed} times removed`;
+      if (viaMarriage) label += " (via marriage)";
+      return { label };
+    }
+
+    // Fallback
+    let label = "related";
+    if (viaMarriage) label += " (via marriage)";
+    return { label };
+  }
+  function clearPath() {
+    compareId = null;
+    currentPath = null;
+    // clear styles on links
+    g.selectAll("path.tree-link")
+      .classed("path", false)
+      .style("stroke", null)
+      .style("stroke-width", null)
+      .style("stroke-opacity", null);
+    g.selectAll("line.tree-spouse")
+      .style("stroke", null)
+      .style("stroke-width", null)
+      .classed("path", false);
+    g.selectAll("path.tree-spouse")
+      .style("stroke", null)
+      .style("stroke-width", null)
+      .classed("path", false);
+    pathCard.style("opacity", 0);
+  }
+  function updatePathHighlight(pathIds) {
+    const { spouseKeys, childParents, peopleById } = buildIndexes();
+    const spouseUsed = new Set();
+    const childLinkIds = new Set();
+    for (let i = 0; i < pathIds.length - 1; i++) {
+      const u = pathIds[i];
+      const v = pathIds[i + 1];
+      const key = hubKey(u, v);
+      if (spouseKeys.has(key)) {
+        spouseUsed.add(key);
+      } else {
+        // parent-child; mark child side
+        if (childParents.get(v)?.has(u)) childLinkIds.add(v);
+        else if (childParents.get(u)?.has(v)) childLinkIds.add(u);
+      }
+    }
+    // highlight child links (green)
+    g.selectAll("path.tree-link")
+      .classed("path", (d) => childLinkIds.has(d.childId))
+      .style("stroke", (d) => (childLinkIds.has(d.childId) ? "#16a34a" : null))
+      .style("stroke-width", (d) => (childLinkIds.has(d.childId) ? 3 : null))
+      .style("stroke-opacity", (d) => (childLinkIds.has(d.childId) ? 1 : null))
+      .filter((d) => childLinkIds.has(d.childId))
+      .raise();
+    // highlight spouse connectors (green, slightly thinner)
+    g.selectAll("line.tree-spouse")
+      .style("stroke", (d) =>
+        spouseUsed.has(d.key ?? d["data-pair-key"]) ? "#4ade80" : null
+      )
+      .style("stroke-width", (d) =>
+        spouseUsed.has(d.key ?? d["data-pair-key"]) ? 2.5 : null
+      );
+    g.selectAll("path.tree-spouse")
+      .style("stroke", (d) =>
+        spouseUsed.has(d.key ?? d["data-pair-key"]) ? "#4ade80" : null
+      )
+      .style("stroke-width", (d) =>
+        spouseUsed.has(d.key ?? d["data-pair-key"]) ? 2.5 : null
+      );
+    // label
+    const { label } = computeKinshipLabel(
+      peopleById,
+      childParents,
+      spouseKeys,
+      pathIds
+    );
+    const aName = fullName(peopleById.get(pathIds[0]));
+    const bName = fullName(peopleById.get(pathIds[pathIds.length - 1]));
+    pathCardTitle.text(`${aName} ↔ ${bName}`);
+    pathCardSubtitle.text(label);
+    // Auto-fit card width up to a max
+    try {
+      const titleW = pathCardTitle.node().getComputedTextLength?.() ?? 0;
+      const subW = pathCardSubtitle.node().getComputedTextLength?.() ?? 0;
+      const w = Math.min(560, Math.max(220, 28 + Math.max(titleW, subW) + 16));
+      pathCardRect.attr("width", w);
+    } catch {}
+    pathCard.style("opacity", 1);
+  }
+  function setCompare(id) {
+    if (!selectedId || id === selectedId) return;
+    const adj = buildAdjacency();
+    const path = bfsPath(selectedId, id, adj);
+    clearPath();
+    compareId = id;
+    if (path && path.length) {
+      currentPath = path;
+      updatePathHighlight(path);
+    } else {
+      // Show modern card with a friendly fallback when no path is found
+      const { peopleById } = buildIndexes();
+      const aName = fullName(peopleById.get(selectedId));
+      const bName = fullName(peopleById.get(id));
+      pathCardTitle.text(`${aName} ↔ ${bName}`);
+      pathCardSubtitle.text("No relationship path found");
+      try {
+        const titleW = pathCardTitle.node().getComputedTextLength?.() ?? 0;
+        const subW = pathCardSubtitle.node().getComputedTextLength?.() ?? 0;
+        const w = Math.min(
+          560,
+          Math.max(220, 28 + Math.max(titleW, subW) + 16)
+        );
+        pathCardRect.attr("width", w);
+      } catch {}
+      pathCard.style("opacity", 1);
+    }
+  }
 
   function setSelected(id) {
     selectedId = id;
+    clearPath();
     g.selectAll("g.tree-node").classed("selected", (d) => d.data.id === id);
 
     // Highlight parent link(s) for the selected child

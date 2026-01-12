@@ -397,13 +397,34 @@ body.view-tree #directoryList {
 
 /* Responsive */
 @media (max-width: 900px) {
+  /* Mobile: keep list and profile side-by-side; remove tree UI */
   .layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(140px, 1fr) minmax(180px, 1fr);
+    gap: 12px;
   }
+
+  /* Ensure directory and details are side by side (no reordering) */
   .directory {
-    order: 2;
+    order: 0;
+    min-height: 60vh;
+    max-height: 60vh;
   }
   .details {
-    order: 1;
+    order: 0;
+    min-height: 60vh;
+  }
+
+  /* Hide the tree view option and the tree container on mobile */
+  .view-toggle [data-view="tree"] {
+    display: none !important;
+  }
+  #treeContainer {
+    display: none !important;
+  }
+  body.view-tree #treeContainer {
+    display: none !important;
+  }
+  body.view-tree #directoryList {
+    display: block !important;
   }
 }
