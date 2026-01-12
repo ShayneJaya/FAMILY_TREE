@@ -15,6 +15,7 @@
     <meta name="description" content="A lightweight family tree directory." />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/auth.css" />
+    <link rel="stylesheet" href="assets/css/tree.css" />
   </head>
   <body>
     <header class="site-header">
@@ -30,6 +31,27 @@
             autocomplete="off"
           />
           <span id="peopleCount" class="count-badge">0 people</span>
+          <div class="view-toggle" role="tablist" aria-label="View mode">
+            <button
+              id="viewListBtn"
+              class="active"
+              data-view="list"
+              role="tab"
+              aria-selected="true"
+              title="List view"
+            >
+              List
+            </button>
+            <button
+              id="viewTreeBtn"
+              data-view="tree"
+              role="tab"
+              aria-selected="false"
+              title="Tree view"
+            >
+              Tree
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -39,6 +61,9 @@
         <ul id="directoryList" class="card-list" role="list">
           <!-- Filled by render.js -->
         </ul>
+        <div id="treeContainer" class="tree-container" hidden>
+          <!-- Interactive tree renders here -->
+        </div>
       </aside>
 
       <section id="details" class="details" aria-label="Person details">
@@ -63,6 +88,7 @@
       This app requires JavaScript to load JSON data and render the directory.
     </noscript>
 
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
     <script type="module" src="assets/js/gate.js"></script>
   </body>
 </html>

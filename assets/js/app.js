@@ -4,21 +4,77 @@
  */
 import { loadAll } from "./dataLoader.js";
 import { renderDirectory, renderDetails } from "./render.js";
+import { createTreeView } from "./tree.js";
 
 const els = {
   list: document.getElementById("directoryList"),
+  treeContainer: document.getElementById("treeContainer"),
   details: document.getElementById("details"),
   search: document.getElementById("searchInput"),
   count: document.getElementById("peopleCount"),
+  viewListBtn: document.getElementById("viewListBtn"),
+  viewTreeBtn: document.getElementById("viewTreeBtn"),
 };
 
 const state = {
   people: [],
-  relationships: [],
   photos: [],
   filtered: [],
   selectedId: null,
+  viewMode: "list",
 };
+
+let treeInstance = null;
+
+function buildRelationshipsFromPeople(people) {
+  const peopleById = new Map(people.map((p) => [p.id, p]));
+
+  // Spouse links (deduplicated)
+  const spouseSet = new Set();
+  const spouseLinks = [];
+  for (const p of people) {
+    const spouses = Array.isArray(p.spouses) ? p.spouses : [];
+    for (const sid of spouses) {
+      const a = p.id;
+      const b = sid;
+      if (!peopleById.has(a) || !peopleById.has(b)) continue;
+      const key = a < b ? `${a}|${b}` : `${b}|${a}`;
+      if (!spouseSet.has(key)) {
+        spouseSet.add(key);
+        spouseLinks.push({ type: "spouse", personAId: a, personBId: b });
+      }
+    }
+  }
+
+  // Parent-child links (from children lists and child.parents)
+  const childParents = new Map(); // childId -> Set(parentId)
+  for (const p of people) {
+    const kids = Array.isArray(p.children) ? p.children : [];
+    for (const cid of kids) {
+      if (!childParents.has(cid)) childParents.set(cid, new Set());
+      childParents.get(cid).add(p.id);
+    }
+  }
+  for (const child of people) {
+    const parents = Array.isArray(child.parents) ? child.parents : [];
+    if (parents.length) {
+      if (!childParents.has(child.id)) childParents.set(child.id, new Set());
+      const s = childParents.get(child.id);
+      parents.forEach((pid) => s.add(pid));
+    }
+  }
+
+  const parentChildLinks = [];
+  for (const [childId, set] of childParents.entries()) {
+    if (!peopleById.has(childId)) continue;
+    const parents = Array.from(set).filter((pid) => peopleById.has(pid));
+    if (parents.length > 0) {
+      parentChildLinks.push({ type: "parent-child", parents, childId });
+    }
+  }
+
+  return [...spouseLinks, ...parentChildLinks];
+}
 
 function updateCount() {
   const n = state.filtered.length;
@@ -73,13 +129,55 @@ function selectPerson(id) {
   state.selectedId = id;
   const person = state.people.find((p) => p.id === id);
   renderDirectory(els.list, state.filtered, state.selectedId);
-  renderDetails(
-    els.details,
-    person,
-    state.relationships,
-    state.people,
-    state.photos
-  );
+  renderDetails(els.details, person, state.people, state.photos);
+  if (treeInstance) treeInstance.select(id);
+}
+
+function setViewMode(mode) {
+  if (mode !== "list" && mode !== "tree") return;
+  state.viewMode = mode;
+  document.body.classList.toggle("view-tree", mode === "tree");
+
+  if (els.list) {
+    els.list.hidden = mode === "tree";
+    els.list.style.display = mode === "tree" ? "none" : "";
+  }
+  if (els.treeContainer) {
+    els.treeContainer.hidden = mode === "list";
+    els.treeContainer.style.display = mode === "list" ? "none" : "block";
+  }
+
+  if (els.viewListBtn) {
+    els.viewListBtn.classList.toggle("active", mode === "list");
+    els.viewListBtn.setAttribute("aria-selected", String(mode === "list"));
+  }
+  if (els.viewTreeBtn) {
+    els.viewTreeBtn.classList.toggle("active", mode === "tree");
+    els.viewTreeBtn.setAttribute("aria-selected", String(mode === "tree"));
+  }
+
+  if (mode === "tree") {
+    if (!treeInstance && els.treeContainer) {
+      treeInstance = createTreeView(
+        els.treeContainer,
+        state.people,
+        buildRelationshipsFromPeople(state.people),
+        {
+          onSelect: (id) => selectPerson(id),
+        }
+      );
+      if (state.selectedId) {
+        treeInstance.select(state.selectedId);
+      }
+      if (treeInstance.fit) treeInstance.fit();
+    } else if (treeInstance) {
+      treeInstance.resize();
+      if (state.selectedId) {
+        treeInstance.select(state.selectedId);
+      }
+      if (treeInstance.fit) treeInstance.fit();
+    }
+  }
 }
 
 function wireEvents() {
@@ -115,24 +213,30 @@ function wireEvents() {
       li?.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
+
+  // View toggle
+  els.viewListBtn?.addEventListener("click", () => setViewMode("list"));
+  els.viewTreeBtn?.addEventListener("click", () => setViewMode("tree"));
+
+  // Resize handling for tree view
+  window.addEventListener("resize", () => {
+    if (state.viewMode === "tree" && treeInstance) {
+      treeInstance.resize();
+      if (treeInstance.fit) treeInstance.fit();
+    }
+  });
 }
 
 async function main() {
-  const { people, relationships, photos } = await loadAll();
+  const { people, photos } = await loadAll();
   state.people = Array.isArray(people) ? people : [];
-  state.relationships = Array.isArray(relationships) ? relationships : [];
   state.photos = Array.isArray(photos) ? photos : [];
   state.filtered = [...state.people];
 
   renderDirectory(els.list, state.filtered, state.selectedId);
-  renderDetails(
-    els.details,
-    null,
-    state.relationships,
-    state.people,
-    state.photos
-  );
+  renderDetails(els.details, null, state.people, state.photos);
   updateCount();
+  setViewMode("list");
   wireEvents();
 }
 

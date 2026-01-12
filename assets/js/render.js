@@ -95,50 +95,14 @@ export function renderDirectory(listEl, people, selectedId = null) {
   listEl.innerHTML = items;
 }
 
-/* Relationship helpers */
-function getSpouses(personId, relationships, peopleById) {
-  return relationships
-    .filter(
-      (r) =>
-        r.type === "spouse" &&
-        (r.personAId === personId || r.personBId === personId)
-    )
-    .map((r) => (r.personAId === personId ? r.personBId : r.personAId))
-    .map((id) => peopleById.get(id))
-    .filter(Boolean);
-}
-function getParents(personId, relationships, peopleById) {
-  const ids = [];
-  relationships
-    .filter((r) => r.type === "parent-child" && r.childId === personId)
-    .forEach((r) => {
-      if (Array.isArray(r.parents)) ids.push(...r.parents);
-      else if (r.parentId) ids.push(r.parentId);
-    });
-  return Array.from(new Set(ids))
-    .map((id) => peopleById.get(id))
-    .filter(Boolean);
-}
-function getChildren(personId, relationships, peopleById) {
-  return relationships
-    .filter(
-      (r) =>
-        r.type === "parent-child" &&
-        (r.parentId === personId ||
-          (Array.isArray(r.parents) && r.parents.includes(personId)))
-    )
-    .map((r) => r.childId)
-    .map((id) => peopleById.get(id))
-    .filter(Boolean);
+/* Relationship helpers (embedded in people) */
+function idsToPeople(ids, peopleById) {
+  return Array.isArray(ids)
+    ? ids.map((id) => peopleById.get(id)).filter(Boolean)
+    : [];
 }
 
-export function renderDetails(
-  sectionEl,
-  person,
-  relationships,
-  allPeople,
-  photos = []
-) {
+export function renderDetails(sectionEl, person, allPeople, photos = []) {
   if (!sectionEl) return;
   if (!person) {
     sectionEl.innerHTML = `
@@ -150,22 +114,15 @@ export function renderDetails(
   }
 
   const peopleById = new Map(allPeople.map((p) => [p.id, p]));
-  const spouses = getSpouses(person.id, relationships, peopleById);
-  const parents = getParents(person.id, relationships, peopleById);
-  const children = getChildren(person.id, relationships, peopleById);
+  const spouses = idsToPeople(person.spouses || [], peopleById);
+  const parents = idsToPeople(person.parents || [], peopleById);
+  const children = idsToPeople(person.children || [], peopleById);
   const childRoleById = new Map(
-    relationships
-      .filter(
-        (r) =>
-          r.type === "parent-child" &&
-          (r.parentId === person.id ||
-            (Array.isArray(r.parents) && r.parents.includes(person.id)))
-      )
-      .map((r) => {
-        const g = peopleById.get(r.childId)?.gender;
-        const inferred = g === "F" ? "daughter" : g === "M" ? "son" : null;
-        return [r.childId, r.childRole || inferred];
-      })
+    children.map((c) => {
+      const g = c?.gender;
+      const inferred = g === "F" ? "daughter" : g === "M" ? "son" : null;
+      return [c.id, inferred];
+    })
   );
   const personPhotos = Array.isArray(photos)
     ? photos.filter(

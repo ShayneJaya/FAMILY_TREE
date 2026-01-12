@@ -14,8 +14,15 @@
     "bio": "",
     "photo": "./assets/img/portraits/P001.png",
     "parents": [],
-    "spouses": ["P002"],
-    "children": ["P003", "P004", "P005", "P006"]
+    "spouses": [
+      "P002"
+    ],
+    "children": [
+      "P003",
+      "P004",
+      "P005",
+      "P006"
+    ]
   },
   {
     "id": "P002",
@@ -32,8 +39,15 @@
     "bio": "",
     "photo": "./assets/img/portraits/P002.png",
     "parents": [],
-    "spouses": ["P001"],
-    "children": ["P003", "P004", "P005", "P006"]
+    "spouses": [
+      "P001"
+    ],
+    "children": [
+      "P003",
+      "P004",
+      "P005",
+      "P006"
+    ]
   },
   {
     "id": "P003",
@@ -49,9 +63,18 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P001", "P002"],
-    "spouses": ["P010"],
-    "children": ["P007", "P008", "P009"]
+    "parents": [
+      "P001",
+      "P002"
+    ],
+    "spouses": [
+      "P010"
+    ],
+    "children": [
+      "P007",
+      "P008",
+      "P009"
+    ]
   },
   {
     "id": "P004",
@@ -67,9 +90,22 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/portraits/P004.jpg",
-    "parents": ["P001", "P002"],
-    "spouses": ["P013"],
-    "children": ["P017", "P018", "P019", "P020", "P021", "P022", "P023"]
+    "parents": [
+      "P001",
+      "P002"
+    ],
+    "spouses": [
+      "P013"
+    ],
+    "children": [
+      "P017",
+      "P018",
+      "P019",
+      "P020",
+      "P021",
+      "P022",
+      "P023"
+    ]
   },
   {
     "id": "P005",
@@ -85,9 +121,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P001", "P002"],
-    "spouses": ["P012"],
-    "children": ["P024", "P025"]
+    "parents": [
+      "P001",
+      "P002"
+    ],
+    "spouses": [
+      "P012"
+    ],
+    "children": [
+      "P024",
+      "P025"
+    ]
   },
   {
     "id": "P006",
@@ -103,8 +147,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/portraits/P006.jpg",
-    "parents": ["P001", "P002"],
-    "spouses": ["P011"],
+    "parents": [
+      "P001",
+      "P002"
+    ],
+    "spouses": [
+      "P011"
+    ],
     "children": [
       "P027",
       "P028",
@@ -132,9 +181,20 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P003", "P010"],
-    "spouses": ["P014"],
-    "children": ["P051", "P052", "P053", "P054", "P055"]
+    "parents": [
+      "P003",
+      "P010"
+    ],
+    "spouses": [
+      "P014"
+    ],
+    "children": [
+      "P051",
+      "P052",
+      "P053",
+      "P054",
+      "P055"
+    ]
   },
   {
     "id": "P008",
@@ -150,9 +210,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P003", "P010"],
-    "spouses": ["P015"],
-    "children": ["P059"]
+    "parents": [
+      "P003",
+      "P010"
+    ],
+    "spouses": [
+      "P015"
+    ],
+    "children": [
+      "P059"
+    ]
   },
   {
     "id": "P009",
@@ -168,9 +235,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P003", "P010"],
-    "spouses": ["P016"],
-    "children": ["P060"]
+    "parents": [
+      "P003",
+      "P010"
+    ],
+    "spouses": [
+      "P016"
+    ],
+    "children": [
+      "P060"
+    ]
   },
   {
     "id": "P010",
@@ -187,8 +261,14 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P003"],
-    "children": ["P007", "P008", "P009"]
+    "spouses": [
+      "P003"
+    ],
+    "children": [
+      "P007",
+      "P008",
+      "P009"
+    ]
   },
   {
     "id": "P011",
@@ -205,7 +285,9 @@
     "bio": "",
     "photo": "./assets/img/portraits/MP011.jpg",
     "parents": [],
-    "spouses": ["P006"],
+    "spouses": [
+      "P006"
+    ],
     "children": [
       "P027",
       "P028",
@@ -234,8 +316,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P005"],
-    "children": ["P024", "P025"]
+    "spouses": [
+      "P005"
+    ],
+    "children": [
+      "P024",
+      "P025"
+    ]
   },
   {
     "id": "P013",
@@ -252,8 +339,18 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P004"],
-    "children": ["P017", "P018", "P019", "P020", "P021", "P022", "P023"]
+    "spouses": [
+      "P004"
+    ],
+    "children": [
+      "P017",
+      "P018",
+      "P019",
+      "P020",
+      "P021",
+      "P022",
+      "P023"
+    ]
   },
   {
     "id": "P014",
@@ -270,8 +367,16 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P007"],
-    "children": ["P051", "P052", "P053", "P054", "P055"]
+    "spouses": [
+      "P007"
+    ],
+    "children": [
+      "P051",
+      "P052",
+      "P053",
+      "P054",
+      "P055"
+    ]
   },
   {
     "id": "P015",
@@ -288,8 +393,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P008"],
-    "children": ["P059"]
+    "spouses": [
+      "P008"
+    ],
+    "children": [
+      "P059"
+    ]
   },
   {
     "id": "P016",
@@ -306,8 +415,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P009"],
-    "children": ["P060"]
+    "spouses": [
+      "P009"
+    ],
+    "children": [
+      "P060"
+    ]
   },
   {
     "id": "P017",
@@ -323,9 +436,19 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
-    "spouses": ["P029"],
-    "children": ["P061", "P062", "P063", "P064"]
+    "parents": [
+      "P004",
+      "P013"
+    ],
+    "spouses": [
+      "P029"
+    ],
+    "children": [
+      "P061",
+      "P062",
+      "P063",
+      "P064"
+    ]
   },
   {
     "id": "P018",
@@ -341,9 +464,19 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
-    "spouses": ["P046"],
-    "children": ["P065", "P066", "P067", "P068"]
+    "parents": [
+      "P004",
+      "P013"
+    ],
+    "spouses": [
+      "P046"
+    ],
+    "children": [
+      "P065",
+      "P066",
+      "P067",
+      "P068"
+    ]
   },
   {
     "id": "P019",
@@ -359,7 +492,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
+    "parents": [
+      "P004",
+      "P013"
+    ],
     "spouses": [],
     "children": []
   },
@@ -377,9 +513,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
-    "spouses": ["P047"],
-    "children": ["P070"]
+    "parents": [
+      "P004",
+      "P013"
+    ],
+    "spouses": [
+      "P047"
+    ],
+    "children": [
+      "P070"
+    ]
   },
   {
     "id": "P021",
@@ -395,9 +538,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
-    "spouses": ["P048"],
-    "children": ["P071", "P072"]
+    "parents": [
+      "P004",
+      "P013"
+    ],
+    "spouses": [
+      "P048"
+    ],
+    "children": [
+      "P071",
+      "P072"
+    ]
   },
   {
     "id": "P022",
@@ -413,9 +564,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
-    "spouses": ["P049"],
-    "children": ["P073", "P074"]
+    "parents": [
+      "P004",
+      "P013"
+    ],
+    "spouses": [
+      "P049"
+    ],
+    "children": [
+      "P073",
+      "P074"
+    ]
   },
   {
     "id": "P023",
@@ -431,9 +590,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P004", "P013"],
-    "spouses": ["P050"],
-    "children": ["P075", "P076"]
+    "parents": [
+      "P004",
+      "P013"
+    ],
+    "spouses": [
+      "P050"
+    ],
+    "children": [
+      "P075",
+      "P076"
+    ]
   },
   {
     "id": "P024",
@@ -449,8 +616,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P005", "P012"],
-    "spouses": ["P026"],
+    "parents": [
+      "P005",
+      "P012"
+    ],
+    "spouses": [
+      "P026"
+    ],
     "children": []
   },
   {
@@ -467,9 +639,19 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P005", "P012"],
-    "spouses": ["P123"],
-    "children": ["P124", "P125", "P126", "P127"]
+    "parents": [
+      "P005",
+      "P012"
+    ],
+    "spouses": [
+      "P123"
+    ],
+    "children": [
+      "P124",
+      "P125",
+      "P126",
+      "P127"
+    ]
   },
   {
     "id": "P026",
@@ -486,7 +668,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P024"],
+    "spouses": [
+      "P024"
+    ],
     "children": []
   },
   {
@@ -503,9 +687,18 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P037"],
-    "children": ["P077", "P078", "P079"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P037"
+    ],
+    "children": [
+      "P077",
+      "P078",
+      "P079"
+    ]
   },
   {
     "id": "P028",
@@ -521,9 +714,18 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P038"],
-    "children": ["P080", "P081", "P082"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P038"
+    ],
+    "children": [
+      "P080",
+      "P081",
+      "P082"
+    ]
   },
   {
     "id": "P029",
@@ -539,9 +741,19 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P017"],
-    "children": ["P061", "P062", "P063", "P064"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P017"
+    ],
+    "children": [
+      "P061",
+      "P062",
+      "P063",
+      "P064"
+    ]
   },
   {
     "id": "P030",
@@ -557,9 +769,18 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P039"],
-    "children": ["P094", "P095", "P096"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P039"
+    ],
+    "children": [
+      "P094",
+      "P095",
+      "P096"
+    ]
   },
   {
     "id": "P031",
@@ -575,9 +796,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P040"],
-    "children": ["P100", "P101"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P040"
+    ],
+    "children": [
+      "P100",
+      "P101"
+    ]
   },
   {
     "id": "P032",
@@ -593,9 +822,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P041"],
-    "children": ["P102"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P041"
+    ],
+    "children": [
+      "P102"
+    ]
   },
   {
     "id": "P033",
@@ -611,9 +847,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P042"],
-    "children": ["P103", "P104"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P042"
+    ],
+    "children": [
+      "P103",
+      "P104"
+    ]
   },
   {
     "id": "P034",
@@ -629,9 +873,18 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P043"],
-    "children": ["P105", "P106", "P107"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P043"
+    ],
+    "children": [
+      "P105",
+      "P106",
+      "P107"
+    ]
   },
   {
     "id": "P035",
@@ -647,9 +900,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P044"],
-    "children": ["P108", "P109"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P044"
+    ],
+    "children": [
+      "P108",
+      "P109"
+    ]
   },
   {
     "id": "P036",
@@ -665,9 +926,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P006", "P011"],
-    "spouses": ["P045"],
-    "children": ["P110", "P111"]
+    "parents": [
+      "P006",
+      "P011"
+    ],
+    "spouses": [
+      "P045"
+    ],
+    "children": [
+      "P110",
+      "P111"
+    ]
   },
   {
     "id": "P037",
@@ -684,8 +953,14 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P027"],
-    "children": ["P077", "P078", "P079"]
+    "spouses": [
+      "P027"
+    ],
+    "children": [
+      "P077",
+      "P078",
+      "P079"
+    ]
   },
   {
     "id": "P038",
@@ -702,8 +977,14 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P028"],
-    "children": ["P080", "P081", "P082"]
+    "spouses": [
+      "P028"
+    ],
+    "children": [
+      "P080",
+      "P081",
+      "P082"
+    ]
   },
   {
     "id": "P039",
@@ -720,8 +1001,14 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P030"],
-    "children": ["P094", "P095", "P096"]
+    "spouses": [
+      "P030"
+    ],
+    "children": [
+      "P094",
+      "P095",
+      "P096"
+    ]
   },
   {
     "id": "P040",
@@ -738,8 +1025,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P031"],
-    "children": ["P100", "P101"]
+    "spouses": [
+      "P031"
+    ],
+    "children": [
+      "P100",
+      "P101"
+    ]
   },
   {
     "id": "P041",
@@ -756,8 +1048,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P032"],
-    "children": ["P102"]
+    "spouses": [
+      "P032"
+    ],
+    "children": [
+      "P102"
+    ]
   },
   {
     "id": "P042",
@@ -774,8 +1070,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P033"],
-    "children": ["P103", "P104"]
+    "spouses": [
+      "P033"
+    ],
+    "children": [
+      "P103",
+      "P104"
+    ]
   },
   {
     "id": "P043",
@@ -792,8 +1093,14 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P034"],
-    "children": ["P105", "P106", "P107"]
+    "spouses": [
+      "P034"
+    ],
+    "children": [
+      "P105",
+      "P106",
+      "P107"
+    ]
   },
   {
     "id": "P044",
@@ -810,8 +1117,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P035"],
-    "children": ["P108", "P109"]
+    "spouses": [
+      "P035"
+    ],
+    "children": [
+      "P108",
+      "P109"
+    ]
   },
   {
     "id": "P045",
@@ -828,8 +1140,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P036"],
-    "children": ["P110", "P111"]
+    "spouses": [
+      "P036"
+    ],
+    "children": [
+      "P110",
+      "P111"
+    ]
   },
   {
     "id": "P046",
@@ -846,8 +1163,15 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P018"],
-    "children": ["P065", "P066", "P067", "P068"]
+    "spouses": [
+      "P018"
+    ],
+    "children": [
+      "P065",
+      "P066",
+      "P067",
+      "P068"
+    ]
   },
   {
     "id": "P047",
@@ -864,8 +1188,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P020"],
-    "children": ["P070"]
+    "spouses": [
+      "P020"
+    ],
+    "children": [
+      "P070"
+    ]
   },
   {
     "id": "P048",
@@ -882,8 +1210,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P021"],
-    "children": ["P071", "P072"]
+    "spouses": [
+      "P021"
+    ],
+    "children": [
+      "P071",
+      "P072"
+    ]
   },
   {
     "id": "P049",
@@ -900,8 +1233,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P022"],
-    "children": ["P073", "P074"]
+    "spouses": [
+      "P022"
+    ],
+    "children": [
+      "P073",
+      "P074"
+    ]
   },
   {
     "id": "P050",
@@ -918,8 +1256,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P023"],
-    "children": ["P075", "P076"]
+    "spouses": [
+      "P023"
+    ],
+    "children": [
+      "P075",
+      "P076"
+    ]
   },
   {
     "id": "P051",
@@ -935,8 +1278,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P007", "P014"],
-    "spouses": ["P056"],
+    "parents": [
+      "P007",
+      "P014"
+    ],
+    "spouses": [
+      "P056"
+    ],
     "children": []
   },
   {
@@ -953,8 +1301,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P007", "P014"],
-    "spouses": ["P057"],
+    "parents": [
+      "P007",
+      "P014"
+    ],
+    "spouses": [
+      "P057"
+    ],
     "children": []
   },
   {
@@ -971,8 +1324,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P007", "P014"],
-    "spouses": ["P059"],
+    "parents": [
+      "P007",
+      "P014"
+    ],
+    "spouses": [
+      "P059"
+    ],
     "children": []
   },
   {
@@ -989,7 +1347,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P007", "P014"],
+    "parents": [
+      "P007",
+      "P014"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1007,8 +1368,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P007", "P014"],
-    "spouses": ["P058"],
+    "parents": [
+      "P007",
+      "P014"
+    ],
+    "spouses": [
+      "P058"
+    ],
     "children": []
   },
   {
@@ -1026,7 +1392,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P051"],
+    "spouses": [
+      "P051"
+    ],
     "children": []
   },
   {
@@ -1044,7 +1412,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P052"],
+    "spouses": [
+      "P052"
+    ],
     "children": []
   },
   {
@@ -1062,7 +1432,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P055"],
+    "spouses": [
+      "P055"
+    ],
     "children": []
   },
   {
@@ -1079,8 +1451,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P008", "P015"],
-    "spouses": ["P053"],
+    "parents": [
+      "P008",
+      "P015"
+    ],
+    "spouses": [
+      "P053"
+    ],
     "children": []
   },
   {
@@ -1097,9 +1474,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P009", "P016"],
-    "spouses": ["P152"],
-    "children": ["P153", "P154"]
+    "parents": [
+      "P009",
+      "P016"
+    ],
+    "spouses": [
+      "P152"
+    ],
+    "children": [
+      "P153",
+      "P154"
+    ]
   },
   {
     "id": "P061",
@@ -1115,9 +1500,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P017", "P029"],
-    "spouses": ["P086"],
-    "children": ["P087", "P088"]
+    "parents": [
+      "P017",
+      "P029"
+    ],
+    "spouses": [
+      "P086"
+    ],
+    "children": [
+      "P087",
+      "P088"
+    ]
   },
   {
     "id": "P062",
@@ -1133,7 +1526,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/portraits/P062.jpg",
-    "parents": ["P017", "P029"],
+    "parents": [
+      "P017",
+      "P029"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1151,9 +1547,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P017", "P029"],
-    "spouses": ["P089"],
-    "children": ["P090", "P091"]
+    "parents": [
+      "P017",
+      "P029"
+    ],
+    "spouses": [
+      "P089"
+    ],
+    "children": [
+      "P090",
+      "P091"
+    ]
   },
   {
     "id": "P064",
@@ -1169,9 +1573,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P017", "P029"],
-    "spouses": ["P115"],
-    "children": ["P143", "P149"]
+    "parents": [
+      "P017",
+      "P029"
+    ],
+    "spouses": [
+      "P115"
+    ],
+    "children": [
+      "P143",
+      "P149"
+    ]
   },
   {
     "id": "P065",
@@ -1187,9 +1599,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P018", "P046"],
-    "spouses": ["P092"],
-    "children": ["P093", "P136"]
+    "parents": [
+      "P018",
+      "P046"
+    ],
+    "spouses": [
+      "P092"
+    ],
+    "children": [
+      "P093",
+      "P136"
+    ]
   },
   {
     "id": "P066",
@@ -1205,9 +1625,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P018", "P046"],
-    "spouses": ["P138"],
-    "children": ["P139", "P146"]
+    "parents": [
+      "P018",
+      "P046"
+    ],
+    "spouses": [
+      "P138"
+    ],
+    "children": [
+      "P139",
+      "P146"
+    ]
   },
   {
     "id": "P067",
@@ -1223,7 +1651,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P018", "P046"],
+    "parents": [
+      "P018",
+      "P046"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1241,9 +1672,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P018", "P046"],
-    "spouses": ["P069"],
-    "children": ["P140"]
+    "parents": [
+      "P018",
+      "P046"
+    ],
+    "spouses": [
+      "P069"
+    ],
+    "children": [
+      "P140"
+    ]
   },
   {
     "id": "P069",
@@ -1260,8 +1698,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P068"],
-    "children": ["P140"]
+    "spouses": [
+      "P068"
+    ],
+    "children": [
+      "P140"
+    ]
   },
   {
     "id": "P070",
@@ -1277,9 +1719,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P020", "P047"],
-    "spouses": ["P132"],
-    "children": ["P145", "P150"]
+    "parents": [
+      "P020",
+      "P047"
+    ],
+    "spouses": [
+      "P132"
+    ],
+    "children": [
+      "P145",
+      "P150"
+    ]
   },
   {
     "id": "P071",
@@ -1295,9 +1745,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P021", "P048"],
-    "spouses": ["P158"],
-    "children": ["P163"]
+    "parents": [
+      "P021",
+      "P048"
+    ],
+    "spouses": [
+      "P158"
+    ],
+    "children": [
+      "P163"
+    ]
   },
   {
     "id": "P072",
@@ -1313,7 +1770,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P021", "P048"],
+    "parents": [
+      "P021",
+      "P048"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1331,9 +1791,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P022", "P049"],
-    "spouses": ["P144"],
-    "children": ["P147", "P155"]
+    "parents": [
+      "P022",
+      "P049"
+    ],
+    "spouses": [
+      "P144"
+    ],
+    "children": [
+      "P147",
+      "P155"
+    ]
   },
   {
     "id": "P074",
@@ -1349,8 +1817,14 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P022", "P049"],
-    "spouses": ["P159", "P160"],
+    "parents": [
+      "P022",
+      "P049"
+    ],
+    "spouses": [
+      "P159",
+      "P160"
+    ],
     "children": []
   },
   {
@@ -1367,9 +1841,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P023", "P050"],
-    "spouses": ["P148"],
-    "children": ["P151"]
+    "parents": [
+      "P023",
+      "P050"
+    ],
+    "spouses": [
+      "P148"
+    ],
+    "children": [
+      "P151"
+    ]
   },
   {
     "id": "P076",
@@ -1385,9 +1866,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P023", "P050"],
-    "spouses": ["P161"],
-    "children": ["P162"]
+    "parents": [
+      "P023",
+      "P050"
+    ],
+    "spouses": [
+      "P161"
+    ],
+    "children": [
+      "P162"
+    ]
   },
   {
     "id": "P077",
@@ -1403,9 +1891,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P027", "P037"],
-    "spouses": ["P083", "P085"],
-    "children": ["P084"]
+    "parents": [
+      "P027",
+      "P037"
+    ],
+    "spouses": [
+      "P083",
+      "P085"
+    ],
+    "children": [
+      "P084"
+    ]
   },
   {
     "id": "P078",
@@ -1421,7 +1917,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P027", "P037"],
+    "parents": [
+      "P027",
+      "P037"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1439,7 +1938,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P027", "P037"],
+    "parents": [
+      "P027",
+      "P037"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1457,7 +1959,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P028", "P038"],
+    "parents": [
+      "P028",
+      "P038"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1475,9 +1980,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P028", "P038"],
-    "spouses": ["P133"],
-    "children": ["P134", "P135"]
+    "parents": [
+      "P028",
+      "P038"
+    ],
+    "spouses": [
+      "P133"
+    ],
+    "children": [
+      "P134",
+      "P135"
+    ]
   },
   {
     "id": "P082",
@@ -1493,7 +2006,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P028", "P038"],
+    "parents": [
+      "P028",
+      "P038"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1512,8 +2028,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P077"],
-    "children": ["P084"]
+    "spouses": [
+      "P077"
+    ],
+    "children": [
+      "P084"
+    ]
   },
   {
     "id": "P084",
@@ -1529,7 +2049,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P077", "P083"],
+    "parents": [
+      "P077",
+      "P083"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1548,7 +2071,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P077"],
+    "spouses": [
+      "P077"
+    ],
     "children": []
   },
   {
@@ -1566,8 +2091,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P061"],
-    "children": ["P087", "P088"]
+    "spouses": [
+      "P061"
+    ],
+    "children": [
+      "P087",
+      "P088"
+    ]
   },
   {
     "id": "P087",
@@ -1583,7 +2113,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P061", "P086"],
+    "parents": [
+      "P061",
+      "P086"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1601,7 +2134,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P061", "P086"],
+    "parents": [
+      "P061",
+      "P086"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1620,8 +2156,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P063"],
-    "children": ["P090", "P091"]
+    "spouses": [
+      "P063"
+    ],
+    "children": [
+      "P090",
+      "P091"
+    ]
   },
   {
     "id": "P090",
@@ -1637,7 +2178,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P063", "P089"],
+    "parents": [
+      "P063",
+      "P089"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1655,7 +2199,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P063", "P089"],
+    "parents": [
+      "P063",
+      "P089"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1674,8 +2221,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P065"],
-    "children": ["P093", "P136"]
+    "spouses": [
+      "P065"
+    ],
+    "children": [
+      "P093",
+      "P136"
+    ]
   },
   {
     "id": "P093",
@@ -1691,7 +2243,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P065", "P092"],
+    "parents": [
+      "P065",
+      "P092"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1709,9 +2264,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P030", "P039"],
-    "spouses": ["P116"],
-    "children": ["P121"]
+    "parents": [
+      "P030",
+      "P039"
+    ],
+    "spouses": [
+      "P116"
+    ],
+    "children": [
+      "P121"
+    ]
   },
   {
     "id": "P095",
@@ -1727,9 +2289,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P030", "P039"],
-    "spouses": ["P097"],
-    "children": ["P098", "P099"]
+    "parents": [
+      "P030",
+      "P039"
+    ],
+    "spouses": [
+      "P097"
+    ],
+    "children": [
+      "P098",
+      "P099"
+    ]
   },
   {
     "id": "P096",
@@ -1745,7 +2315,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P030", "P039"],
+    "parents": [
+      "P030",
+      "P039"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1764,8 +2337,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P095"],
-    "children": ["P098", "P099"]
+    "spouses": [
+      "P095"
+    ],
+    "children": [
+      "P098",
+      "P099"
+    ]
   },
   {
     "id": "P098",
@@ -1781,7 +2359,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P095", "P097"],
+    "parents": [
+      "P095",
+      "P097"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1799,7 +2380,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P095", "P097"],
+    "parents": [
+      "P095",
+      "P097"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1817,8 +2401,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P031", "P040"],
-    "spouses": ["P120"],
+    "parents": [
+      "P031",
+      "P040"
+    ],
+    "spouses": [
+      "P120"
+    ],
     "children": []
   },
   {
@@ -1835,8 +2424,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P031", "P040"],
-    "spouses": ["P119"],
+    "parents": [
+      "P031",
+      "P040"
+    ],
+    "spouses": [
+      "P119"
+    ],
     "children": []
   },
   {
@@ -1853,9 +2447,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P032", "P041"],
-    "spouses": ["P117"],
-    "children": ["P118"]
+    "parents": [
+      "P032",
+      "P041"
+    ],
+    "spouses": [
+      "P117"
+    ],
+    "children": [
+      "P118"
+    ]
   },
   {
     "id": "P103",
@@ -1871,9 +2472,18 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P033", "P042"],
-    "spouses": ["P112"],
-    "children": ["P113", "P114", "P137"]
+    "parents": [
+      "P033",
+      "P042"
+    ],
+    "spouses": [
+      "P112"
+    ],
+    "children": [
+      "P113",
+      "P114",
+      "P137"
+    ]
   },
   {
     "id": "P104",
@@ -1889,9 +2499,17 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P033", "P042"],
-    "spouses": ["P122"],
-    "children": ["P141", "P142"]
+    "parents": [
+      "P033",
+      "P042"
+    ],
+    "spouses": [
+      "P122"
+    ],
+    "children": [
+      "P141",
+      "P142"
+    ]
   },
   {
     "id": "P105",
@@ -1907,7 +2525,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P034", "P043"],
+    "parents": [
+      "P034",
+      "P043"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1925,7 +2546,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P034", "P043"],
+    "parents": [
+      "P034",
+      "P043"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1943,7 +2567,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P034", "P043"],
+    "parents": [
+      "P034",
+      "P043"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1961,7 +2588,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P035", "P044"],
+    "parents": [
+      "P035",
+      "P044"
+    ],
     "spouses": [],
     "children": []
   },
@@ -1979,9 +2609,16 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P035", "P044"],
-    "spouses": ["P156"],
-    "children": ["P157"]
+    "parents": [
+      "P035",
+      "P044"
+    ],
+    "spouses": [
+      "P156"
+    ],
+    "children": [
+      "P157"
+    ]
   },
   {
     "id": "P110",
@@ -1997,8 +2634,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P036", "P045"],
-    "spouses": ["P159"],
+    "parents": [
+      "P036",
+      "P045"
+    ],
+    "spouses": [
+      "P159"
+    ],
     "children": []
   },
   {
@@ -2015,7 +2657,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P036", "P045"],
+    "parents": [
+      "P036",
+      "P045"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2034,8 +2679,14 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P103"],
-    "children": ["P113", "P114", "P137"]
+    "spouses": [
+      "P103"
+    ],
+    "children": [
+      "P113",
+      "P114",
+      "P137"
+    ]
   },
   {
     "id": "P113",
@@ -2051,7 +2702,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P103", "P112"],
+    "parents": [
+      "P103",
+      "P112"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2069,7 +2723,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P103", "P112"],
+    "parents": [
+      "P103",
+      "P112"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2088,8 +2745,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P064"],
-    "children": ["P143", "P149"]
+    "spouses": [
+      "P064"
+    ],
+    "children": [
+      "P143",
+      "P149"
+    ]
   },
   {
     "id": "P116",
@@ -2106,8 +2768,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P094"],
-    "children": ["P121"]
+    "spouses": [
+      "P094"
+    ],
+    "children": [
+      "P121"
+    ]
   },
   {
     "id": "P117",
@@ -2124,8 +2790,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P102"],
-    "children": ["P118"]
+    "spouses": [
+      "P102"
+    ],
+    "children": [
+      "P118"
+    ]
   },
   {
     "id": "P118",
@@ -2141,7 +2811,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P102", "P117"],
+    "parents": [
+      "P102",
+      "P117"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2160,7 +2833,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P101"],
+    "spouses": [
+      "P101"
+    ],
     "children": []
   },
   {
@@ -2178,7 +2853,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P100"],
+    "spouses": [
+      "P100"
+    ],
     "children": []
   },
   {
@@ -2195,7 +2872,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P094", "P116"],
+    "parents": [
+      "P094",
+      "P116"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2214,8 +2894,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P104"],
-    "children": ["P141", "P142"]
+    "spouses": [
+      "P104"
+    ],
+    "children": [
+      "P141",
+      "P142"
+    ]
   },
   {
     "id": "P123",
@@ -2232,8 +2917,15 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P025"],
-    "children": ["P124", "P125", "P126", "P127"]
+    "spouses": [
+      "P025"
+    ],
+    "children": [
+      "P124",
+      "P125",
+      "P126",
+      "P127"
+    ]
   },
   {
     "id": "P124",
@@ -2249,8 +2941,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P025", "P123"],
-    "spouses": ["P128"],
+    "parents": [
+      "P025",
+      "P123"
+    ],
+    "spouses": [
+      "P128"
+    ],
     "children": []
   },
   {
@@ -2267,8 +2964,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P025", "P123"],
-    "spouses": ["P129"],
+    "parents": [
+      "P025",
+      "P123"
+    ],
+    "spouses": [
+      "P129"
+    ],
     "children": []
   },
   {
@@ -2285,8 +2987,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P025", "P123"],
-    "spouses": ["P130"],
+    "parents": [
+      "P025",
+      "P123"
+    ],
+    "spouses": [
+      "P130"
+    ],
     "children": []
   },
   {
@@ -2303,8 +3010,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P025", "P123"],
-    "spouses": ["P131"],
+    "parents": [
+      "P025",
+      "P123"
+    ],
+    "spouses": [
+      "P131"
+    ],
     "children": []
   },
   {
@@ -2322,7 +3034,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P124"],
+    "spouses": [
+      "P124"
+    ],
     "children": []
   },
   {
@@ -2340,7 +3054,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P125"],
+    "spouses": [
+      "P125"
+    ],
     "children": []
   },
   {
@@ -2358,7 +3074,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P126"],
+    "spouses": [
+      "P126"
+    ],
     "children": []
   },
   {
@@ -2376,7 +3094,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P127"],
+    "spouses": [
+      "P127"
+    ],
     "children": []
   },
   {
@@ -2394,8 +3114,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P070"],
-    "children": ["P145", "P150"]
+    "spouses": [
+      "P070"
+    ],
+    "children": [
+      "P145",
+      "P150"
+    ]
   },
   {
     "id": "P133",
@@ -2412,8 +3137,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P081"],
-    "children": ["P134", "P135"]
+    "spouses": [
+      "P081"
+    ],
+    "children": [
+      "P134",
+      "P135"
+    ]
   },
   {
     "id": "P134",
@@ -2429,7 +3159,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P081", "P133"],
+    "parents": [
+      "P081",
+      "P133"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2447,7 +3180,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P081", "P133"],
+    "parents": [
+      "P081",
+      "P133"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2465,7 +3201,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P065", "P092"],
+    "parents": [
+      "P065",
+      "P092"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2483,8 +3222,13 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P103", "P112"],
-    "spouses": ["P164"],
+    "parents": [
+      "P103",
+      "P112"
+    ],
+    "spouses": [
+      "P164"
+    ],
     "children": []
   },
   {
@@ -2502,8 +3246,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P066"],
-    "children": ["P139", "P146"]
+    "spouses": [
+      "P066"
+    ],
+    "children": [
+      "P139",
+      "P146"
+    ]
   },
   {
     "id": "P139",
@@ -2519,7 +3268,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P066", "P138"],
+    "parents": [
+      "P066",
+      "P138"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2537,7 +3289,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P068", "P069"],
+    "parents": [
+      "P068",
+      "P069"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2555,7 +3310,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P104", "P122"],
+    "parents": [
+      "P104",
+      "P122"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2573,7 +3331,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P104", "P122"],
+    "parents": [
+      "P104",
+      "P122"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2591,7 +3352,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P064", "P115"],
+    "parents": [
+      "P064",
+      "P115"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2610,8 +3374,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P073"],
-    "children": ["P147", "P155"]
+    "spouses": [
+      "P073"
+    ],
+    "children": [
+      "P147",
+      "P155"
+    ]
   },
   {
     "id": "P145",
@@ -2627,7 +3396,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P070", "P132"],
+    "parents": [
+      "P070",
+      "P132"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2645,7 +3417,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P066", "P138"],
+    "parents": [
+      "P066",
+      "P138"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2663,7 +3438,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P073", "P144"],
+    "parents": [
+      "P073",
+      "P144"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2682,8 +3460,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P075"],
-    "children": ["P151"]
+    "spouses": [
+      "P075"
+    ],
+    "children": [
+      "P151"
+    ]
   },
   {
     "id": "P149",
@@ -2699,7 +3481,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P064", "P115"],
+    "parents": [
+      "P064",
+      "P115"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2717,7 +3502,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P070", "P132"],
+    "parents": [
+      "P070",
+      "P132"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2735,7 +3523,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P075", "P148"],
+    "parents": [
+      "P075",
+      "P148"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2754,8 +3545,13 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P060"],
-    "children": ["P153", "P154"]
+    "spouses": [
+      "P060"
+    ],
+    "children": [
+      "P153",
+      "P154"
+    ]
   },
   {
     "id": "P153",
@@ -2771,7 +3567,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P060", "P152"],
+    "parents": [
+      "P060",
+      "P152"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2789,7 +3588,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P060", "P152"],
+    "parents": [
+      "P060",
+      "P152"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2807,7 +3609,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P073", "P144"],
+    "parents": [
+      "P073",
+      "P144"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2826,8 +3631,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P109"],
-    "children": ["P157"]
+    "spouses": [
+      "P109"
+    ],
+    "children": [
+      "P157"
+    ]
   },
   {
     "id": "P157",
@@ -2843,7 +3652,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P109", "P156"],
+    "parents": [
+      "P109",
+      "P156"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2862,8 +3674,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P071"],
-    "children": ["P163"]
+    "spouses": [
+      "P071"
+    ],
+    "children": [
+      "P163"
+    ]
   },
   {
     "id": "P159",
@@ -2880,7 +3696,10 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P074", "P110"],
+    "spouses": [
+      "P074",
+      "P110"
+    ],
     "children": []
   },
   {
@@ -2898,7 +3717,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P074"],
+    "spouses": [
+      "P074"
+    ],
     "children": []
   },
   {
@@ -2916,8 +3737,12 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P076"],
-    "children": ["P162"]
+    "spouses": [
+      "P076"
+    ],
+    "children": [
+      "P162"
+    ]
   },
   {
     "id": "P162",
@@ -2933,7 +3758,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P076", "P161"],
+    "parents": [
+      "P076",
+      "P161"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2951,7 +3779,10 @@
     "occupation": "",
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
-    "parents": ["P071", "P158"],
+    "parents": [
+      "P071",
+      "P158"
+    ],
     "spouses": [],
     "children": []
   },
@@ -2970,7 +3801,9 @@
     "bio": "",
     "photo": "./assets/img/placeholders/placeholder.svg",
     "parents": [],
-    "spouses": ["P137"],
+    "spouses": [
+      "P137"
+    ],
     "children": []
   }
 ]

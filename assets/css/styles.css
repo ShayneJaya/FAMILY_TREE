@@ -359,6 +359,42 @@ body {
   word-break: break-word;
 }
 
+/* Tree view layout adjustments */
+body.view-tree .container {
+  width: min(1400px, 98%);
+}
+
+body.view-tree .layout {
+  grid-template-columns: minmax(640px, 70%) 1fr;
+}
+
+body.view-tree .directory {
+  overflow: hidden; /* let the tree manage its own panning */
+  padding: 0;
+  min-height: 85vh;
+  max-height: 85vh;
+}
+
+body.view-tree .details {
+  min-height: 85vh;
+}
+
+body.view-tree .tree-container {
+  min-height: 85vh;
+  max-height: 85vh;
+}
+
+/* View mode visibility (force the correct panel to show) */
+#treeContainer {
+  display: none;
+}
+body.view-tree #treeContainer {
+  display: block;
+}
+body.view-tree #directoryList {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .layout {

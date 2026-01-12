@@ -1,0 +1,105 @@
+/* Tree view and toggle styles */
+
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  background: var(--panel-2);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.view-toggle button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.view-toggle button:hover {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.view-toggle button.active {
+  background: #12243a;
+  color: var(--text);
+  border: 1px solid #243244;
+}
+
+/* Tree container mirrors directory panel styling */
+.tree-container {
+  background: rgba(11, 18, 32, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  min-height: 70vh;
+  max-height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* SVG covers the container */
+.tree-container svg.tree-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Links and nodes */
+.tree-link {
+  fill: none;
+  stroke: rgba(148, 163, 184, 0.35);
+  stroke-width: 1.5px;
+}
+
+.tree-spouse {
+  fill: none;
+  stroke: rgba(148, 163, 184, 0.6); /* a bit stronger so it stands out */
+  stroke-width: 2px;
+  pointer-events: none; /* do not block node clicks */
+}
+
+.tree-node circle {
+  fill: #0a0f1a;
+  stroke: #1a2639;
+  stroke-width: 1px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.tree-node text {
+  font-size: 12px;
+  fill: var(--text);
+  paint-order: stroke;
+  stroke: rgba(11, 18, 32, 0.85);
+  stroke-width: 3px;
+}
+
+/* Subtle gender tint */
+.tree-node.node--F circle {
+  fill: rgba(244, 114, 182, 0.15);
+  stroke: rgba(244, 114, 182, 0.35);
+}
+
+.tree-node.node--M circle {
+  fill: rgba(96, 165, 250, 0.15);
+  stroke: rgba(96, 165, 250, 0.35);
+}
+
+/* Selected highlight */
+.tree-node.selected circle {
+  stroke: var(--primary);
+  stroke-width: 2.2px;
+}
+
+/* Pan/zoom cursor */
+.tree-container {
+  cursor: grab;
+}
+.tree-container:active {
+  cursor: grabbing;
+}
